@@ -12,12 +12,99 @@ const dmsans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.triage-home.com"),
+
   title: {
-    default: "TriageHome | On-Demand Home Healthcare Services",
-    template: "%s | Triage",
+    default:
+      "TriageHome | Home Healthcare Services in Lagos & Nigeria",
+    template: "%s | TriageHome",
   },
+
   description:
-    "TriageHome provides reliable, on-demand home healthcare by connecting you with verified nurses and care professionals.",
+    "TriageHome provides trusted on-demand home healthcare services in Lagos and across Nigeria. Book verified nurses, caregivers, and healthcare professionals for elderly care, post-surgery care, wellness checks, chronic disease management, IV therapy, and in-home medical support.",
+
+  keywords: [
+    "home healthcare Nigeria",
+    "home healthcare Lagos",
+    "home care services Lagos",
+    "nurse at home Nigeria",
+    "doctor home visit Lagos",
+    "elderly care Nigeria",
+    "caregiver services Lagos",
+    "post surgery care at home",
+    "in-home healthcare services",
+    "professional caregivers Nigeria",
+    "home nursing services",
+    "healthcare at home",
+    "digital healthcare Nigeria",
+    "IV therapy Lagos",
+    "wellness checks at home",
+    "chronic disease management Nigeria",
+    "medical care at home",
+    "private nursing services Lagos",
+    "trusted healthcare providers Nigeria",
+    "on demand healthcare",
+  ],
+
+  authors: [{ name: "TriageHome" }],
+
+  creator: "TriageHome",
+
+  publisher: "TriageHome",
+
+  openGraph: {
+    title:
+      "TriageHome | Trusted Home Healthcare Services in Nigeria",
+
+    description:
+      "Professional healthcare delivered to your home. Book verified nurses, caregivers, wellness checks, elderly care, post-surgery care, IV therapy, and more with TriageHome.",
+
+    url: "https://www.triage-home.com",
+
+    siteName: "TriageHome",
+
+    images: [
+      {
+        url: "https://triage-home.com/images/banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TriageHome Home Healthcare Services",
+      },
+    ],
+
+    locale: "en_NG",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "TriageHome | On-Demand Home Healthcare Services",
+
+    description:
+      "Book trusted nurses, caregivers, and healthcare professionals directly to your home in Lagos and across Nigeria.",
+
+    images: ["https://triage-home.com/images/banner.jpg"],
+  },
+
+  alternates: {
+    canonical: "https://www.triage-home.com",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  category: "Healthcare",
 };
 
 export default function RootLayout({

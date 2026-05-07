@@ -26,70 +26,121 @@ import Soon from "./components/soon";
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://triage-home.com"),
+  metadataBase: new URL("https://www.triage-home.com"),
 
   title: {
-    default: "TriageHome | On-Demand Home Healthcare & Medical Support",
+    default:
+      "TriageHome | Home Healthcare Services in Lagos & Nigeria",
     template: "%s | TriageHome",
   },
 
   description:
-    "TriageHome connects you with verified nurses, health assistants, and care professionals, delivering reliable, on-demand healthcare services in the comfort of your home.",
+    "TriageHome provides trusted home healthcare services in Lagos and across Nigeria. Book verified nurses, caregivers, elderly care, IV therapy, post-surgery care, wellness checks, chronic disease management, and professional medical support delivered directly to your home.",
 
   keywords: [
-    "TriageHome healthcare",
-    "TriageHome care",
-    "TriageHome Nigeria",
-    "home healthcare services Nigeria",
-    "on-demand healthcare Nigeria",
+    "home healthcare Nigeria",
+    "home healthcare Lagos",
+    "home care services Nigeria",
+    "home care services Lagos",
+    "nurse at home Lagos",
+    "doctor home visit Nigeria",
+    "caregiver services Lagos",
+    "elderly care Nigeria",
+    "elderly care Lagos",
+    "post surgery care at home",
+    "IV therapy Lagos",
+    "wellness checks at home",
     "home nursing services",
-    "private nurse at home",
     "medical care at home",
-    "post-surgery care at home",
-    "elderly care services Nigeria",
-    "home medical assistance",
+    "healthcare at home Nigeria",
+    "professional caregivers Nigeria",
+    "private nursing services Lagos",
+    "chronic disease management Nigeria",
+    "trusted healthcare providers Nigeria",
+    "on demand healthcare Nigeria",
+    "digital healthcare Nigeria",
     "in-home patient care",
     "healthcare support services",
     "verified nurses Nigeria",
-    "reliable home care Nigeria",
-    "professional caregivers Nigeria",
-    "healthcare services Lagos",
+    "home medical assistance",
   ],
 
+  authors: [
+    {
+      name: "TriageHome",
+      url: "https://www.triage-home.com",
+    },
+  ],
+
+  creator: "TriageHome",
+
+  publisher: "TriageHome",
+
+  category: "Healthcare",
+
   openGraph: {
-    title: "TriageHome | Trusted Home Healthcare, On Demand",
+    title:
+      "TriageHome | Trusted Home Healthcare Services in Nigeria",
+
     description:
-      "Access professional healthcare from the comfort of your home. TriageHome connects you with verified nurses and care specialists for reliable, personalized support.",
-    url: "https://triage-home.com",
+      "Professional healthcare delivered directly to your home. Book verified nurses, caregivers, wellness checks, elderly care, IV therapy, post-surgery care, and more with TriageHome.",
+
+    url: "https://www.triage-home.com",
+
     siteName: "TriageHome",
+
+    locale: "en_NG",
+
     type: "website",
+
     images: [
       {
-        url: "https://triage-home.com/images/banner.jpg", // MUST be absolute
+        url: "https://www.triage-home.com/images/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "TriageHome On-Demand Home Healthcare Services",
+        alt: "TriageHome Home Healthcare Services in Nigeria",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "TriageHome | Home Healthcare, Simplified",
+
+    title:
+      "TriageHome | Home Healthcare Services in Lagos & Nigeria",
+
     description:
-      "Professional healthcare at your doorstep. Book verified nurses and caregivers with ease through Triage.",
-    images: ["https://triage-home.com/images/banner.jpg"], // MUST be absolute
+      "Book trusted nurses, caregivers, elderly care, IV therapy, wellness checks, and professional healthcare services directly to your home.",
+
+    images: [
+      "https://www.triage-home.com/images/banner.jpg",
+    ],
+
+    creator: "@triagehome",
   },
 
   robots: {
     index: true,
     follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   alternates: {
-    canonical: "https://triage-home.com",
+    canonical: "https://www.triage-home.com",
   },
-};/* -------------------------------------
+
+  verification: {
+    google: "ADD_GOOGLE_SEARCH_CONSOLE_CODE_HERE",
+  },
+};
+/* -------------------------------------
    HOME PAGE
 ------------------------------------- */
 export default function Home() {

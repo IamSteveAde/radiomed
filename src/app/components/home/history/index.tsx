@@ -1,47 +1,55 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
   {
     title: "Elderly Care",
+    slug: "elderly-care",
     desc: "Compassionate, dignified support for elderly or physically challenged patients, from daily assistance and companionship to medication management and regular health monitoring, helping them live independently at home.",
     image: "/images/blog/elderly-care.webp",
     color: "bg-triage-teal",
   },
   {
     title: "Post-Surgery Care",
+    slug: "post-surgery-care",
     desc: "Professional recovery support with vital signs monitoring, surgical site care, medication reminders, and early detection of complications, ensuring a smooth and safe healing process.",
     image: "/images/blog/8.webp",
     color: "bg-triage-purple",
   },
   {
     title: "Chronic Disease Management",
+    slug: "chronic-disease-management",
     desc: "Ongoing support for conditions like diabetes and hypertension, including regular monitoring, medication guidance, and patient education to help maintain stability and improve quality of life.",
     image: "/images/blog/chronic-health.webp",
     color: "bg-triage-navy",
   },
   {
     title: "IV Therapy",
+    slug: "iv-therapy",
     desc: "Safe administration of prescribed IV fluids, vitamins, and medications in the comfort of your home, delivered by trained healthcare professionals.",
     image: "/images/blog/ivtherapy.webp",
     color: "bg-triage-orange",
   },
   {
     title: "Wellness Check",
+    slug: "wellness-check",
     desc: "A complete health review including vital signs check, risk assessment, and lifestyle consultation, helping you stay proactive about your health.",
     image: "/images/blog/wellness-check.webp",
     color: "bg-triage-lime",
   },
   {
     title: "Health Screening",
+    slug: "health-screening",
     desc: "Quick and reliable on-the-spot tests including malaria, typhoid, HIV, blood pressure, glucose, and BMI, giving you clarity and peace of mind instantly.",
     image: "/images/blog/health-screening.webp",
-    color: "bg-[#ffbf00]", // Amber
+    color: "bg-[#ffbf00]",
   },
   {
     title: "Wound Care",
+    slug: "wound-care",
     desc: "Expert wound assessment, cleaning, dressing, and infection monitoring, ensuring proper healing and reducing the risk of complications.",
     image: "/images/blog/7.webp",
     color: "bg-triage-teal",
@@ -54,15 +62,17 @@ export default function WhatWeDoTabs() {
   return (
     <section className="relative py-28 px-6 overflow-hidden">
 
-      {/* 🌍 BACKGROUND */}
+      {/* BACKGROUND */}
       <div className="absolute inset-0 bg-triage-gray-50" />
 
-      {/* subtle grid */}
+      {/* GRID */}
       <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(0deg,#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      {/* floating boxes */}
+      {/* FLOATING SHAPES */}
       <div className="absolute inset-0 overflow-hidden">
+
         {[...Array(10)].map((_, i) => (
+
           <div
             key={i}
             className="absolute bg-white shadow-xl rounded-xl"
@@ -75,7 +85,9 @@ export default function WhatWeDoTabs() {
               opacity: 0.06,
             }}
           />
+
         ))}
+
       </div>
 
       {/* CONTENT */}
@@ -84,20 +96,21 @@ export default function WhatWeDoTabs() {
         {/* HEADER */}
         <div className="text-center mb-14">
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-triage-navy">
+          <h2 className="text-4xl md:text-5xl font-semibold text-triage-navy font-raleway">
             What We Do
           </h2>
 
-          <p className="mt-4 text-triage-gray-600 text-lg">
+          <p className="mt-4 text-triage-gray-600 text-lg font-nunito">
             Personalized healthcare services designed around your needs.
           </p>
 
         </div>
 
-        {/* 🧠 TABS */}
+        {/* TABS */}
         <div className="flex flex-wrap justify-center gap-3 mb-16">
 
           {services.map((tab, i) => (
+
             <button
               key={i}
               onClick={() => setActive(i)}
@@ -110,12 +123,14 @@ export default function WhatWeDoTabs() {
             >
               {tab.title}
             </button>
+
           ))}
 
         </div>
 
-        {/* 🎬 CONTENT */}
+        {/* CONTENT */}
         <AnimatePresence mode="wait">
+
           <motion.div
             key={active}
             initial={{ opacity: 0, y: 40, scale: 0.98 }}
@@ -130,30 +145,52 @@ export default function WhatWeDoTabs() {
               {/* TEXT */}
               <div>
 
-                <h3 className="text-3xl md:text-4xl font-semibold">
+                <h3 className="text-3xl md:text-4xl font-semibold font-raleway">
                   {services[active].title}
                 </h3>
 
-                <p className="mt-5 text-white/90 text-lg leading-relaxed">
+                <p className="mt-5 text-white/90 text-lg leading-relaxed font-nunito">
                   {services[active].desc}
                 </p>
 
                 <div className="mt-6 w-16 h-[2px] bg-white/70" />
 
+                {/* BUTTONS */}
+                <div className="mt-8 flex flex-wrap gap-4">
+
+                  <Link
+                    href={`/services/${services[active].slug}`}
+                    className="inline-flex items-center justify-center rounded-2xl bg-white text-triage-navy px-6 py-3 text-sm font-semibold transition hover:scale-[1.02] hover:bg-white/90"
+                  >
+                    Learn More
+                  </Link>
+
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+                  >
+                    Book Care
+                  </Link>
+
+                </div>
+
               </div>
 
               {/* IMAGE */}
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
+
                 <img
                   src={services[active].image}
                   alt={services[active].title}
                   className="w-full h-[320px] md:h-[380px] object-cover"
                 />
+
               </div>
 
             </div>
 
           </motion.div>
+
         </AnimatePresence>
 
       </div>

@@ -82,34 +82,71 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-3 text-white/70">
-              <li>
-                <Link href="/services" className="hover:text-triage-orange transition">
-                  Elderly Care
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-triage-orange transition">
-                  Post-Surgery Care
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-triage-orange transition">
-                  Chronic Disease Management
-                </Link>  </li>
-                <li><Link href="/services" className="hover:text-triage-orange transition">
-                  IV Therapy
-                </Link>  </li>
-                <li><Link href="/services" className="hover:text-triage-orange transition">
-                  Wellness Check
-                </Link>  </li>
-                <li><Link href="/services" className="hover:text-triage-orange transition">
-                  Health Screening
-                </Link>  </li>
-                <li><Link href="/services" className="hover:text-triage-orange transition">
-                  Wound Care
-                </Link>
-              </li>
-            </ul>
+
+  <li>
+    <Link
+      href="/services/elderly-care"
+      className="hover:text-triage-orange transition"
+    >
+      Elderly Care
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/services/post-surgery-care"
+      className="hover:text-triage-orange transition"
+    >
+      Post-Surgery Care
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/services/chronic-disease-management"
+      className="hover:text-triage-orange transition"
+    >
+      Chronic Disease Management
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/services/iv-therapy"
+      className="hover:text-triage-orange transition"
+    >
+      IV Therapy
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/services/wellness-check"
+      className="hover:text-triage-orange transition"
+    >
+      Wellness Check
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/services/health-screening"
+      className="hover:text-triage-orange transition"
+    >
+      Health Screening
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/services/wound-care"
+      className="hover:text-triage-orange transition"
+    >
+      Wound Care
+    </Link>
+  </li>
+
+</ul>
           </div>
 
           {/* COMPANY */}
