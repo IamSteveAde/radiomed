@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">1. About TriageHome</h2>
             <p>
-              TriageHome is an innovative technology marketplace designed to improve healthcare access by connecting patients with verified and independently licensed clinical providers, including nurses, health assistants, caregivers, and other related professionals for in-home healthcare services.
+              TriageHome is an innovative technology marketplace designed to improve healthcare access by connecting clients with verified and independently licensed clinical providers, including nurses, health assistants, providers, and other related professionals for in-home healthcare services.
             </p>
             <p className="mt-3">
               TriageHome is committed to protecting personal and medical data in line with the Nigeria Data Protection Act 2023 (NDPA) and other applicable laws.
@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
                   <li>DoB</li>
                   <li>Government issued ID and or License Number</li>
                   <li>Account login details</li>
-                  <li>Profile information (patients, caregivers, health assistants or nurses)</li>
+                  <li>Profile information (clients, providers, health assistants or nurses)</li>
                 </ul>
               </div>
 
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
                   <li>Medical history</li>
                   <li>Symptoms and diagnoses</li>
                   <li>Treatment records</li>
-                  <li>Care notes shared between patients and providers</li>
+                  <li>Care notes shared between clients and providers</li>
                 </ul>
                 <p className="mt-2">
                   Medical data is stored securely on our servers and is accessible only to authorized users.
@@ -92,7 +92,7 @@ export default function PrivacyPolicyPage() {
               <div>
                 <h3 className="font-semibold text-black">c. Location Data</h3>
                 <ul className="list-disc pl-6 mt-2">
-                  <li>Match patients with nearby clinical providers</li>
+                  <li>Match clients with nearby clinical providers</li>
                   <li>Enable home service delivery</li>
                 </ul>
               </div>

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const solutions = [
   {
     title: "TriageApp",
-    desc: "Connect patients with verified nurses, health assistants, and community health workers, delivering reliable, on-demand care right at home.",
+    desc: "Connect clients with verified nurses, health assistants, and community health workers, delivering reliable, on-demand care right at home.",
     tag: "Available Soon",
     image:
       "images/blog/12.webp",

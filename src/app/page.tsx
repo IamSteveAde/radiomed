@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "TriageHome provides trusted home healthcare services in Lagos and across Nigeria. Book verified nurses, caregivers, elderly care, IV therapy, post-surgery care, wellness checks, chronic disease management, and professional medical support delivered directly to your home.",
+    "TriageHome provides trusted home healthcare services in Lagos and across Nigeria. Book verified nurses, providers, elderly care, IV therapy, post-surgery care, wellness checks, chronic disease management, and professional medical support delivered directly to your home.",
 
   keywords: [
     "home healthcare Nigeria",
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
     "home nursing services",
     "medical care at home",
     "healthcare at home Nigeria",
-    "professional caregivers Nigeria",
+    "professional providers Nigeria",
     "private nursing services Lagos",
     "chronic disease management Nigeria",
     "trusted healthcare providers Nigeria",
     "on demand healthcare Nigeria",
     "digital healthcare Nigeria",
-    "in-home patient care",
+    "in-home client care",
     "healthcare support services",
     "verified nurses Nigeria",
     "home medical assistance",
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
       "TriageHome | Trusted Home Healthcare Services in Nigeria",
 
     description:
-      "Professional healthcare delivered directly to your home. Book verified nurses, caregivers, wellness checks, elderly care, IV therapy, post-surgery care, and more with TriageHome.",
+      "Professional healthcare delivered directly to your home. Book verified nurses, providers, wellness checks, elderly care, IV therapy, post-surgery care, and more with TriageHome.",
 
     url: "https://www.triage-home.com",
 
@@ -110,7 +110,7 @@ export const metadata: Metadata = {
       "TriageHome | Home Healthcare Services in Lagos & Nigeria",
 
     description:
-      "Book trusted nurses, caregivers, elderly care, IV therapy, wellness checks, and professional healthcare services directly to your home.",
+      "Book trusted nurses, providers, elderly care, IV therapy, wellness checks, and professional healthcare services directly to your home.",
 
     images: [
       "https://www.triage-home.com/images/banner.jpg",

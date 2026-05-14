@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "TriageHome provides trusted on-demand home healthcare services in Lagos and across Nigeria. Book verified nurses, caregivers, and healthcare professionals for elderly care, post-surgery care, wellness checks, chronic disease management, IV therapy, and in-home medical support.",
+    "TriageHome provides trusted on-demand home healthcare services in Lagos and across Nigeria. Book verified nurses, providers, and healthcare professionals for elderly care, post-surgery care, wellness checks, chronic disease management, IV therapy, and in-home medical support.",
 
   keywords: [
     "home healthcare Nigeria",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "caregiver services Lagos",
     "post surgery care at home",
     "in-home healthcare services",
-    "professional caregivers Nigeria",
+    "professional providers Nigeria",
     "home nursing services",
     "healthcare at home",
     "digital healthcare Nigeria",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       "TriageHome | Trusted Home Healthcare Services in Nigeria",
 
     description:
-      "Professional healthcare delivered to your home. Book verified nurses, caregivers, wellness checks, elderly care, post-surgery care, IV therapy, and more with TriageHome.",
+      "Professional healthcare delivered to your home. Book verified nurses, providers, wellness checks, elderly care, post-surgery care, IV therapy, and more with TriageHome.",
 
     url: "https://www.triage-home.com",
 
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
       "TriageHome | On-Demand Home Healthcare Services",
 
     description:
-      "Book trusted nurses, caregivers, and healthcare professionals directly to your home in Lagos and across Nigeria.",
+      "Book trusted nurses, providers, and healthcare professionals directly to your home in Lagos and across Nigeria.",
 
     images: ["https://triage-home.com/images/banner.jpg"],
   },

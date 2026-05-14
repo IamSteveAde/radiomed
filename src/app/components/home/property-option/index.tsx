@@ -1,33 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ClipboardList, UserCheck, Truck } from "lucide-react";
 
 const steps = [
   {
     title: "Request Care",
     desc: "Tell us what you need and where you are. It takes less than a minute.",
-    icon: ClipboardList,
+    icon: "/icons/care.png",
   },
   {
     title: "Get Matched",
     desc: "We instantly connect you with a verified healthcare professional near you.",
-    icon: UserCheck,
+    icon: "/icons/nurse.png",
   },
   {
     title: "Receive Care",
     desc: "A qualified provider arrives at your doorstep, fast, safe, and reliable.",
-    icon: Truck,
+    icon: "/icons/first.png",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="relative py-24 md:py-32 px-5 md:px-6 overflow-hidden text-white">
-
+    <section className="relative overflow-hidden px-5 py-24 text-white md:px-6 md:py-32">
+      
       {/* 🌌 BACKGROUND */}
       <div className="absolute inset-0 z-0">
-
+        
         {/* NAVY BASE */}
         <div className="absolute inset-0 bg-triage-navy" />
 
@@ -37,43 +36,44 @@ export default function HowItWorks() {
 
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 mx-auto max-w-6xl">
 
         {/* HEADER */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-white">
+        <div className="mb-16 text-center md:mb-20">
+
+          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
             Care, in three simple steps
           </h2>
 
-          <p className="mt-4 text-white/70 text-base md:text-lg">
+          <p className="mt-4 text-base text-white/70 md:text-lg">
             From request to care, seamless, reliable, and fast.
           </p>
+
         </div>
 
         {/* TIMELINE */}
         <div className="relative">
 
           {/* MOBILE LINE */}
-          <div className="absolute left-4 top-0 h-full w-[2px] bg-triage-orange/40 md:hidden" />
+          <div className="absolute left-4 top-0 h-full w-[2px] bg-[#aa7130]/40 md:hidden" />
 
           {/* DESKTOP LINE */}
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-triage-orange/40" />
+          <div className="absolute left-1/2 top-0 hidden h-full w-[2px] -translate-x-1/2 bg-[#aa7130]/40 md:block" />
 
           <div className="space-y-12 md:space-y-20">
 
             {steps.map((step, i) => {
               const isLeft = i % 2 === 0;
-              const Icon = step.icon;
 
               return (
                 <div key={i} className="relative">
 
                   {/* MOBILE VERSION */}
-                  <div className="md:hidden flex gap-6 items-start">
+                  <div className="flex items-start gap-6 md:hidden">
 
                     {/* DOT */}
                     <div className="relative z-10 mt-2">
-                      <div className="w-4 h-4 rounded-full bg-triage-orange shadow-[0_0_15px_rgba(170,113,48,0.6)]" />
+                      <div className="h-4 w-4 rounded-full bg-[#aa7130] shadow-[0_0_15px_rgba(170,113,48,0.6)]" />
                     </div>
 
                     {/* CARD */}
@@ -81,12 +81,21 @@ export default function HowItWorks() {
                       initial={{ opacity: 0, y: 40 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6 }}
-                      className="flex-1 group relative p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10"
+                      className="group relative flex-1 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
                     >
 
-                      <div className="mb-4 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-triage-orange">
+                      {/* ICON */}
+                      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white">
 
-                        <Icon className="w-5 h-5 text-white" />
+                        <img
+                          src={step.icon}
+                          alt={step.title}
+                          className="h-6 w-6 object-contain brightness-0"
+                          style={{
+                            filter:
+                              "brightness(0) saturate(100%) invert(45%) sepia(28%) saturate(881%) hue-rotate(352deg) brightness(92%) contrast(89%)",
+                          }}
+                        />
 
                       </div>
 
@@ -94,7 +103,7 @@ export default function HowItWorks() {
                         {step.title}
                       </h3>
 
-                      <p className="mt-2 text-white/70 text-sm">
+                      <p className="mt-2 text-sm text-white/70">
                         {step.desc}
                       </p>
 
@@ -103,21 +112,31 @@ export default function HowItWorks() {
                   </div>
 
                   {/* DESKTOP VERSION */}
-                  <div className="hidden md:flex items-center justify-between">
+                  <div className="hidden items-center justify-between md:flex">
 
                     {/* LEFT */}
                     <div className="w-[45%]">
+
                       {isLeft && (
                         <motion.div
                           initial={{ opacity: 0, x: -60 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.6 }}
-                          className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10"
+                          className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
                         >
 
-                          <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-triage-orange">
+                          {/* ICON */}
+                          <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white">
 
-                            <Icon className="w-6 h-6 text-white" />
+                            <img
+                              src={step.icon}
+                              alt={step.title}
+                              className="h-7 w-7 object-contain brightness-0"
+                              style={{
+                                filter:
+                                  "brightness(0) saturate(100%) invert(45%) sepia(28%) saturate(881%) hue-rotate(352deg) brightness(92%) contrast(89%)",
+                              }}
+                            />
 
                           </div>
 
@@ -131,26 +150,37 @@ export default function HowItWorks() {
 
                         </motion.div>
                       )}
+
                     </div>
 
                     {/* CENTER DOT */}
                     <div className="relative z-10 flex items-center justify-center">
-                      <div className="w-5 h-5 rounded-full bg-triage-orange shadow-[0_0_20px_rgba(170,113,48,0.6)]" />
+                      <div className="h-5 w-5 rounded-full bg-[#aa7130] shadow-[0_0_20px_rgba(170,113,48,0.6)]" />
                     </div>
 
                     {/* RIGHT */}
                     <div className="w-[45%]">
+
                       {!isLeft && (
                         <motion.div
                           initial={{ opacity: 0, x: 60 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.6 }}
-                          className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10"
+                          className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
                         >
 
-                          <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-triage-orange">
+                          {/* ICON */}
+                          <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white">
 
-                            <Icon className="w-6 h-6 text-white" />
+                            <img
+                              src={step.icon}
+                              alt={step.title}
+                              className="h-7 w-7 object-contain brightness-0"
+                              style={{
+                                filter:
+                                  "brightness(0) saturate(100%) invert(45%) sepia(28%) saturate(881%) hue-rotate(352deg) brightness(92%) contrast(89%)",
+                              }}
+                            />
 
                           </div>
 
@@ -164,6 +194,7 @@ export default function HowItWorks() {
 
                         </motion.div>
                       )}
+
                     </div>
 
                   </div>

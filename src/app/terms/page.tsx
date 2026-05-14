@@ -39,10 +39,10 @@ export default function TermsPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">1. About TriageHome</h2>
             <p>
-              TriageHome is an innovative technology marketplace designed to improve healthcare access by connecting patients with verified and independently licensed clinical providers, including nurses, health assistants, caregivers, and other related professionals for in-home healthcare services.
+              TriageHome is an innovative technology marketplace designed to improve healthcare access by connecting clients with verified and independently licensed clinical providers, including nurses, health assistants, providers, and other related professionals for in-home healthcare services.
             </p>
             <p className="mt-3">
-              TriageHome does not provide medical care directly. We facilitate connections and access between users, patients and independent clinical providers.
+              TriageHome does not provide medical care directly. We facilitate connections and access between users, clients and independent clinical providers.
             </p>
           </div>
 

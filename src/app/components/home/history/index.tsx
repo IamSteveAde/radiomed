@@ -8,7 +8,7 @@ const services = [
   {
     title: "Elderly Care",
     slug: "elderly-care",
-    desc: "Compassionate, dignified support for elderly or physically challenged patients, from daily assistance and companionship to medication management and regular health monitoring, helping them live independently at home.",
+    desc: "Compassionate, dignified support for elderly or physically challenged clients, from daily assistance and companionship to medication management and regular health monitoring, helping them live independently at home.",
     image: "/images/blog/elderly-care.webp",
     color: "bg-triage-teal",
   },
@@ -22,7 +22,7 @@ const services = [
   {
     title: "Chronic Disease Management",
     slug: "chronic-disease-management",
-    desc: "Ongoing support for conditions like diabetes and hypertension, including regular monitoring, medication guidance, and patient education to help maintain stability and improve quality of life.",
+    desc: "Ongoing support for conditions like diabetes and hypertension, including regular monitoring, medication guidance, and client education to help maintain stability and improve quality of life.",
     image: "/images/blog/chronic-health.webp",
     color: "bg-triage-navy",
   },
@@ -30,7 +30,7 @@ const services = [
     title: "IV Therapy",
     slug: "iv-therapy",
     desc: "Safe administration of prescribed IV fluids, vitamins, and medications in the comfort of your home, delivered by trained healthcare professionals.",
-    image: "/images/blog/ivtherapy.webp",
+    image: "/images/blog/iv.png",
     color: "bg-triage-orange",
   },
   {
@@ -41,10 +41,10 @@ const services = [
     color: "bg-triage-lime",
   },
   {
-    title: "Health Screening",
+    title: "Health Screenings",
     slug: "health-screening",
     desc: "Quick and reliable on-the-spot tests including malaria, typhoid, HIV, blood pressure, glucose, and BMI, giving you clarity and peace of mind instantly.",
-    image: "/images/blog/health-screening.webp",
+    image: "/images/blog/hs.png",
     color: "bg-[#ffbf00]",
   },
   {
@@ -159,7 +159,7 @@ export default function WhatWeDoTabs() {
                 <div className="mt-8 flex flex-wrap gap-4">
 
                   <Link
-                    href={`/services/${services[active].slug}`}
+                    href={`/access-plans/${services[active].slug}`}
                     className="inline-flex items-center justify-center rounded-2xl bg-white text-triage-navy px-6 py-3 text-sm font-semibold transition hover:scale-[1.02] hover:bg-white/90"
                   >
                     Learn More

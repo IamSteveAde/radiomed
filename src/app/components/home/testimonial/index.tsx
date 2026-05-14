@@ -96,7 +96,7 @@ Hello, I’d like to request care service.
               </label>
 
               <div className="flex flex-wrap gap-3">
-                {["Elderly Care", "Post-Surgery Care", "Chronic Disease Management", "IV Therapy", "Wellness Check", "Health Screening", "Wound Care"].map(
+                {["Elderly Care", "Post-Surgery Care", "Chronic Disease Management", "IV Therapy", "Wellness Check", "Health Screenings", "Wound Care"].map(
                   (item) => (
                     <button
                       type="button"

@@ -32,15 +32,15 @@ const faqs = [
   },
   {
     question:
-      "How does TriageHome ensure patient and provider safety?",
+      "How does TriageHome ensure client and provider safety?",
     answer:
-      "We maintain strict safety protocols, identity verification, and continuous monitoring to ensure a safe and trusted environment for both patients and providers.",
+      "We maintain strict safety protocols, identity verification, and continuous monitoring to ensure a safe and trusted environment for both clients and providers.",
   },
   {
     question:
       "What partnerships are available for hospitals and corporate wellness?",
     answer:
-      "We partner with hospitals and organizations to provide on-demand clinical staff and structured healthcare support for teams and patients.",
+      "We partner with hospitals and organizations to provide on-demand clinical staff and structured healthcare support for teams and clients.",
   },
 ];
 

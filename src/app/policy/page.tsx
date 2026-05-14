@@ -42,13 +42,13 @@ export default function PoliciesPage() {
 
         <div className="space-y-6">
 
-          {/* 1.0 TERMS OF SERVICE */}
-          <PolicySection title="1.0 Terms of Service">
+          {/* 1.0 TERMS AND CONDITION */}
+          <PolicySection title="1.0 Terms and Condition">
             <p>
               Chuks AI is a paid, AI-powered digital service designed to assist users
               with automation, content generation, and decision-support tools.
               By accessing or using the platform, you agree to be legally bound by
-              these Terms of Service.
+              these Terms and condition.
             </p>
 
             <h3 className="font-semibold mt-4">1.1 Service Overview</h3>

@@ -133,7 +133,7 @@ export default function Footer() {
       href="/services/health-screening"
       className="hover:text-triage-orange transition"
     >
-      Health Screening
+      Health Screenings
     </Link>
   </li>
 
@@ -211,7 +211,7 @@ export default function Footer() {
               Privacy Policy
             </Link>
             <Link href="/terms" className="hover:text-triage-orange transition">
-              Terms of Service
+              Terms and condition
             </Link>
           </div>
 
