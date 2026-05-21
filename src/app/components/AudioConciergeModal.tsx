@@ -3,111 +3,189 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import {
+  Play,
+  X,
+  Headphones,
+  Activity,
+} from "lucide-react";
+
 export default function AudioConciergeModal() {
   const [open, setOpen] = useState(false);
   const [playing, setPlaying] = useState(false);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // show once (localStorage)
+  // SHOW ONLY ONCE
   useEffect(() => {
-    const seen = localStorage.getItem("audio_concierge_seen");
+    const seen = localStorage.getItem(
+      "radiomed_audio_concierge_seen"
+    );
+
     if (!seen) {
-      setTimeout(() => setOpen(true), 1200); // slight delay feels premium
-      localStorage.setItem("audio_concierge_seen", "true");
+      setTimeout(() => setOpen(true), 1200);
+
+      localStorage.setItem(
+        "radiomed_audio_concierge_seen",
+        "true"
+      );
     }
   }, []);
 
+  // PLAY AUDIO
   const handlePlay = () => {
     setPlaying(true);
+
     setOpen(false);
 
-    // play audio
     if (audioRef.current) {
       audioRef.current.play();
     }
   };
 
+  // CLOSE
   const handleClose = () => {
     setOpen(false);
   };
 
   return (
     <>
-      {/* AUDIO ELEMENT */}
-      <audio ref={audioRef} src="/audio/welcome.m4a" preload="auto" />
+      {/* AUDIO */}
+      <audio
+        ref={audioRef}
+        src="/audio/welcome.mp3"
+        preload="auto"
+      />
 
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[999] flex items-center justify-center px-6"
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center px-5"
           >
-
             {/* BACKDROP */}
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-md" />
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-md" />
 
             {/* MODAL */}
             <motion.div
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 40, scale: 0.95 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 max-w-lg w-full rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.4)]"
+              initial={{
+                opacity: 0,
+                y: 40,
+                scale: 0.95,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+              }}
+              exit={{
+                opacity: 0,
+                y: 40,
+                scale: 0.95,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="relative w-full max-w-xl overflow-hidden rounded-[36px] shadow-[0_30px_100px_rgba(0,0,0,0.45)]"
             >
+              {/* BACKGROUND */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#071A3D] to-[#0F172A]" />
 
-              {/* 🌌 BACKGROUND */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#0B3C5D] to-[#022C22]" />
+              {/* GRID */}
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-              {/* glow */}
-              <div className="absolute w-[300px] h-[300px] bg-blue-500/30 blur-[120px] rounded-full -top-20 -left-20" />
-              <div className="absolute w-[250px] h-[250px] bg-teal-400/30 blur-[120px] rounded-full bottom-[-60px] right-[-40px]" />
+              {/* GLOW */}
+              <div className="absolute -left-20 -top-20 h-[260px] w-[260px] rounded-full bg-red-500/20 blur-[120px]" />
+
+              <div className="absolute bottom-[-80px] right-[-40px] h-[260px] w-[260px] rounded-full bg-cyan-400/20 blur-[120px]" />
 
               {/* CONTENT */}
-              <div className="relative z-10 p-8 text-white">
+              <div className="relative z-10 p-8 text-white md:p-10">
+                {/* TOP */}
+                <div className="flex items-start justify-between">
+                  {/* BRAND */}
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-xl">
+                      <Activity className="h-7 w-7 text-[#E50914]" />
+                    </div>
 
-                {/* TITLE */}
-                <h3 className="text-2xl font-semibold leading-tight">
-                  Welcome to TriageHome
-                </h3>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.3em] text-[#E50914]">
+                        RadioMed
+                      </p>
 
-                {/* MESSAGE */}
-                <p className="mt-4 text-white/80 leading-relaxed">
-                  Would you like a quick guided introduction to how we deliver
-                  trusted care at home, and how you can get started in minutes?
-                </p>
+                      <h3 className="mt-2 text-2xl font-black">
+                        Welcome Experience
+                      </h3>
+                    </div>
+                  </div>
 
-                {/* BUTTONS */}
-                <div className="mt-8 flex flex-col sm:flex-row gap-3">
-
-                  {/* YES */}
-                  <button
-                    onClick={handlePlay}
-                    className="flex-1 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-teal-400 font-medium text-white shadow-md hover:scale-[1.02] transition"
-                  >
-                    Yes, walk me through it
-                  </button>
-
-                  {/* NO */}
+                  {/* CLOSE */}
                   <button
                     onClick={handleClose}
-                    className="flex-1 py-3 rounded-xl border border-white/20 text-white/80 hover:bg-white/10 transition"
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:bg-white/10 hover:text-white"
                   >
-                    I’ll explore myself
+                    <X className="h-5 w-5" />
                   </button>
-
                 </div>
 
-                {/* SMALL TEXT */}
-                <p className="mt-4 text-xs text-white/50">
-                  Takes less than 30 seconds
-                </p>
+                {/* TEXT */}
+                <div className="mt-10">
+                  <h2 className="max-w-lg text-3xl font-black leading-[1.05] tracking-tight md:text-4xl">
+                    Welcome to the future of
+                    <span className="text-[#E50914]">
+                      {" "}diagnostic healthcare
+                    </span>
+                    in Nigeria.
+                  </h2>
 
+                  <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
+                    Would you like a quick guided introduction to
+                    RadioMed’s advanced imaging, diagnostics, and
+                    healthcare infrastructure platform?
+                  </p>
+                </div>
+
+                {/* BUTTONS */}
+                <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                  {/* PLAY */}
+                  <button
+                    onClick={handlePlay}
+                    className="group flex flex-1 items-center justify-center gap-3 rounded-2xl bg-[#E50914] px-6 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-red-600"
+                  >
+                    <Play className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+
+                    Play Introduction
+                  </button>
+
+                  {/* EXPLORE */}
+                  <button
+                    onClick={handleClose}
+                    className="flex flex-1 items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white/80 backdrop-blur-xl transition-all duration-300 hover:bg-white/10 hover:text-white"
+                  >
+                    <Headphones className="h-5 w-5" />
+
+                    I’ll Explore Myself
+                  </button>
+                </div>
+
+                {/* FOOTER */}
+                <div className="mt-8 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-white/40">
+                  <div className="h-[1px] w-10 bg-white/20" />
+
+                  Less than 30 seconds
+                </div>
               </div>
-
             </motion.div>
-
           </motion.div>
         )}
       </AnimatePresence>

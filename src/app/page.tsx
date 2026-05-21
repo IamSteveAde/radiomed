@@ -24,68 +24,68 @@ import Soon from "./components/soon";
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.triage-home.com"),
+  metadataBase: new URL("https://www.radiomedtech.com"),
 
   title: {
     default:
-      "TriageHome | Home Healthcare Services in Lagos & Nigeria",
-    template: "%s | TriageHome",
+      "RadioMed Technology | Advanced Diagnostic Healthcare in Nigeria",
+    template: "%s | RadioMed Technology",
   },
 
   description:
-    "TriageHome provides trusted home healthcare services in Lagos and across Nigeria. Book verified nurses, providers, elderly care, IV therapy, post-surgery care, wellness checks, chronic disease management, and professional medical support delivered directly to your home.",
+    "RadioMed Technology is transforming diagnostic healthcare in Nigeria through advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure. Access MRI imaging, CT scans, digital X-ray, ultrasound, laboratory diagnostics, and specialist healthcare support.",
 
   keywords: [
-    "home healthcare Nigeria",
-    "home healthcare Lagos",
-    "home care services Nigeria",
-    "home care services Lagos",
-    "nurse at home Lagos",
-    "doctor home visit Nigeria",
-    "caregiver services Lagos",
-    "elderly care Nigeria",
-    "elderly care Lagos",
-    "post surgery care at home",
-    "IV therapy Lagos",
-    "wellness checks at home",
-    "home nursing services",
-    "medical care at home",
-    "healthcare at home Nigeria",
-    "professional providers Nigeria",
-    "private nursing services Lagos",
-    "chronic disease management Nigeria",
-    "trusted healthcare providers Nigeria",
-    "on demand healthcare Nigeria",
-    "digital healthcare Nigeria",
-    "in-home client care",
-    "healthcare support services",
-    "verified nurses Nigeria",
-    "home medical assistance",
+    "diagnostic healthcare Nigeria",
+    "MRI scan Nigeria",
+    "CT scan Lagos",
+    "MRI imaging Nigeria",
+    "CT imaging Nigeria",
+    "digital xray Nigeria",
+    "ultrasound Lagos",
+    "radiology center Nigeria",
+    "advanced imaging Lagos",
+    "laboratory diagnostics Nigeria",
+    "diagnostic center Lagos",
+    "medical imaging Nigeria",
+    "healthcare infrastructure Nigeria",
+    "telemedicine Nigeria",
+    "healthcare technology Nigeria",
+    "preventive healthcare Nigeria",
+    "specialist healthcare Nigeria",
+    "medical diagnostics Lagos",
+    "diagnostic services Nigeria",
+    "healthcare expansion Nigeria",
+    "modern healthcare Nigeria",
+    "solar powered healthcare infrastructure",
+    "medical technology Nigeria",
+    "healthcare innovation Nigeria",
+    "RadioMed Technology",
   ],
 
   authors: [
     {
-      name: "TriageHome",
-      url: "https://www.triage-home.com",
+      name: "RadioMed Technology",
+      url: "https://www.radiomedtech.com",
     },
   ],
 
-  creator: "TriageHome",
+  creator: "RadioMed Technology",
 
-  publisher: "TriageHome",
+  publisher: "RadioMed Technology",
 
   category: "Healthcare",
 
   openGraph: {
     title:
-      "TriageHome | Trusted Home Healthcare Services in Nigeria",
+      "RadioMed Technology | Advanced Diagnostic Healthcare in Nigeria",
 
     description:
-      "Professional healthcare delivered directly to your home. Book verified nurses, providers, wellness checks, elderly care, IV therapy, post-surgery care, and more with TriageHome.",
+      "Advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure built for underserved communities across Nigeria.",
 
-    url: "https://www.triage-home.com",
+    url: "https://www.radiomedtech.com",
 
-    siteName: "TriageHome",
+    siteName: "RadioMed Technology",
 
     locale: "en_NG",
 
@@ -93,10 +93,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://www.triage-home.com/images/banner.jpg",
+        url: "https://www.radiomedtech.com/images/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "TriageHome Home Healthcare Services in Nigeria",
+        alt: "RadioMed Technology Diagnostic Healthcare Infrastructure",
       },
     ],
   },
@@ -105,16 +105,16 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "TriageHome | Home Healthcare Services in Lagos & Nigeria",
+      "RadioMed Technology | Diagnostic Healthcare Infrastructure",
 
     description:
-      "Book trusted nurses, providers, elderly care, IV therapy, wellness checks, and professional healthcare services directly to your home.",
+      "Book advanced diagnostic services including MRI, CT scans, ultrasound, digital X-ray, laboratory diagnostics, and specialist healthcare support.",
 
     images: [
-      "https://www.triage-home.com/images/banner.jpg",
+      "https://www.radiomedtech.com/images/banner.jpg",
     ],
 
-    creator: "@triagehome",
+    creator: "@radiomedtech",
   },
 
   robots: {
@@ -131,14 +131,13 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://www.triage-home.com",
+    canonical: "https://www.radiomedtech.com",
   },
 
   verification: {
     google: "ADD_GOOGLE_SEARCH_CONSOLE_CODE_HERE",
   },
-};
-/* -------------------------------------
+};/* -------------------------------------
    HOME PAGE
 ------------------------------------- */
 export default function Home() {

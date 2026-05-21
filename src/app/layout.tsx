@@ -12,67 +12,68 @@ const dmsans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.triage-home.com"),
+  metadataBase: new URL("https://www.radiomedtech.com"),
 
   title: {
     default:
-      "TriageHome | Home Healthcare Services in Lagos & Nigeria",
-    template: "%s | TriageHome",
+      "RadioMed Technology | Advanced Diagnostic Healthcare in Nigeria",
+    template: "%s | RadioMed Technology",
   },
 
   description:
-    "TriageHome provides trusted on-demand home healthcare services in Lagos and across Nigeria. Book verified nurses, providers, and healthcare professionals for elderly care, post-surgery care, wellness checks, chronic disease management, IV therapy, and in-home medical support.",
+    "RadioMed Technology is transforming diagnostic healthcare in Nigeria through advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure. Access CT scans, MRI imaging, ultrasound, digital X-ray, laboratory diagnostics, and specialist healthcare support.",
 
   keywords: [
-    "home healthcare Nigeria",
-    "home healthcare Lagos",
-    "home care services Lagos",
-    "nurse at home Nigeria",
-    "doctor home visit Lagos",
-    "elderly care Nigeria",
-    "caregiver services Lagos",
-    "post surgery care at home",
-    "in-home healthcare services",
-    "professional providers Nigeria",
-    "home nursing services",
-    "healthcare at home",
-    "digital healthcare Nigeria",
-    "IV therapy Lagos",
-    "wellness checks at home",
-    "chronic disease management Nigeria",
-    "medical care at home",
-    "private nursing services Lagos",
-    "trusted healthcare providers Nigeria",
-    "on demand healthcare",
+    "diagnostic healthcare Nigeria",
+    "MRI scan Nigeria",
+    "CT scan Lagos",
+    "MRI imaging Nigeria",
+    "CT imaging Nigeria",
+    "digital xray Lagos",
+    "ultrasound Nigeria",
+    "medical diagnostics Nigeria",
+    "laboratory diagnostics Nigeria",
+    "advanced imaging Nigeria",
+    "radiology center Lagos",
+    "diagnostic center Nigeria",
+    "healthcare infrastructure Nigeria",
+    "telemedicine Nigeria",
+    "medical imaging Lagos",
+    "healthcare technology Nigeria",
+    "specialist healthcare Nigeria",
+    "preventive healthcare Nigeria",
+    "diagnostic services Lagos",
+    "RadioMed Technology",
   ],
 
-  authors: [{ name: "TriageHome" }],
+  authors: [{ name: "RadioMed Technology" }],
 
-  creator: "TriageHome",
+  creator: "RadioMed Technology",
 
-  publisher: "TriageHome",
+  publisher: "RadioMed Technology",
 
   openGraph: {
     title:
-      "TriageHome | Trusted Home Healthcare Services in Nigeria",
+      "RadioMed Technology | Advanced Diagnostic Healthcare in Nigeria",
 
     description:
-      "Professional healthcare delivered to your home. Book verified nurses, providers, wellness checks, elderly care, post-surgery care, IV therapy, and more with TriageHome.",
+      "Advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure built for underserved communities across Nigeria.",
 
-    url: "https://www.triage-home.com",
+    url: "https://www.radiomedtech.com",
 
-    siteName: "TriageHome",
+    siteName: "RadioMed Technology",
 
     images: [
       {
-        url: "https://triage-home.com/images/banner.jpg",
+        url: "https://www.radiomedtech.com/images/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "TriageHome Home Healthcare Services",
+        alt: "RadioMed Technology Diagnostic Healthcare",
       },
     ],
 
     locale: "en_NG",
+
     type: "website",
   },
 
@@ -80,21 +81,24 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "TriageHome | On-Demand Home Healthcare Services",
+      "RadioMed Technology | Diagnostic Healthcare Infrastructure",
 
     description:
-      "Book trusted nurses, providers, and healthcare professionals directly to your home in Lagos and across Nigeria.",
+      "Book advanced diagnostic services including MRI, CT scans, ultrasound, digital X-ray, laboratory diagnostics, and specialist healthcare support.",
 
-    images: ["https://triage-home.com/images/banner.jpg"],
+    images: [
+      "https://www.radiomedtech.com/images/banner.jpg",
+    ],
   },
 
   alternates: {
-    canonical: "https://www.triage-home.com",
+    canonical: "https://www.radiomedtech.com",
   },
 
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
