@@ -140,7 +140,7 @@ export default function AudioConciergeModal() {
 
                 {/* TEXT */}
                 <div className="mt-10">
-                  <h2 className="max-w-lg text-3xl font-black leading-[1.05] tracking-tight md:text-4xl">
+                  <h2 className="max-w-lg text-white text-3xl font-black leading-[1.05] tracking-tight md:text-4xl">
                     Welcome to the future of
                     <span className="text-[#E50914]">
                       {" "}diagnostic healthcare

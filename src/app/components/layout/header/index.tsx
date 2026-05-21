@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowUpRight,
-  ChevronDown,
   Menu,
   X,
 } from "lucide-react";
@@ -12,8 +11,6 @@ import {
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [platformDropdown, setPlatformDropdown] =
-    useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +22,37 @@ export default function Header() {
     return () =>
       window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "About",
+      href: "/about",
+    },
+    {
+      name: "Services",
+      href: "/services",
+    },
+    {
+      name: "Sustainability",
+      href: "/sustainability",
+    },
+    {
+      name: "Expansion Vision",
+      href: "/expansion",
+    },
+    {
+      name: "Investors",
+      href: "/investors",
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+    },
+  ];
 
   return (
     <>
@@ -45,13 +73,13 @@ export default function Header() {
           scrolled ? "py-4" : "py-6"
         }`}
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10">
           <div
             className={`relative flex items-center justify-between overflow-hidden rounded-full border transition-all duration-500 ${
               scrolled
                 ? "border-white/10 bg-[#071A3D]/80 shadow-[0_20px_80px_rgba(2,6,23,0.25)] backdrop-blur-2xl"
                 : "border-white/10 bg-gradient-to-r from-[#071A3D]/70 via-[#0B1F47]/70 to-[#071A3D]/70 backdrop-blur-xl"
-            } px-5 py-1`}
+            } px-5 py-2`}
           >
             {/* BACKGROUND GLOWS */}
             <div className="absolute inset-0 overflow-hidden rounded-full">
@@ -62,102 +90,35 @@ export default function Header() {
 
             {/* LOGO */}
             <a
-  href="/"
-  className="relative z-10 flex items-center"
->
-  <img
-    src="/images/logo/rmed.svg"
-    alt="RadioMed Logo"
-    className="h-14 w-auto object-contain md:h-16"
-  />
-</a>
+              href="/"
+              className="relative z-10 flex items-center"
+            >
+              <img
+                src="/images/logo/rmed.svg"
+                alt="RadioMed Logo"
+                className="h-12 w-auto object-contain md:h-14"
+              />
+            </a>
+
             {/* DESKTOP NAV */}
             <nav className="relative z-10 hidden items-center gap-6 xl:flex">
-              {/* HOME */}
-              <a
-                href="/"
-                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
-              >
-                Home
+              {navLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
+                >
+                  {link.name}
 
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </a>
-
-              {/* ABOUT */}
-              <a
-                href="/about"
-                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
-              >
-                About
-
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </a>
-
-              {/* SERVICES */}
-              <a
-                href="/services"
-                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
-              >
-                Services
-
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </a>
-
-              {/* sustain */}
-              <a
-                href="/sustainability"
-                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
-              >
-                Sustainability / ESG
-
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </a>
-              
-              {/* INVESTORS */}
-              <a
-                href="/investors"
-                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
-              >
-                Investors
-
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </a>
-
-              {/* expansion */}
-              <a
-                href="/expansion"
-                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
-              >
-                Expansion Vision
-
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </a>
-
-
-
-              {/* CONTACT */}
-              <a
-                href="/contact"
-                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
-              >
-                Contact
-
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </a>
+                  <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+                </a>
+              ))}
             </nav>
-
-            {/* RIGHT SIDE */}
-            <div className="relative z-10 hidden items-center gap-4 xl:flex">
-              {/* BADGE */}
-              
-
-              
-            </div>
 
             {/* MOBILE BUTTON */}
             <button
               onClick={() => setMobileMenu(true)}
-              className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white backdrop-blur-xl xl:hidden"
+              className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white backdrop-blur-xl xl:hidden"
             >
               <Menu className="h-5 w-5" />
             </button>
@@ -190,42 +151,35 @@ export default function Header() {
             </div>
 
             {/* TOP */}
-            <div className="relative z-10 flex items-center justify-between px-6 py-8">
+            <div className="relative z-10 flex items-center justify-between px-6 py-7">
               {/* LOGO */}
               <a
-  href="/"
-  className="relative z-10 flex items-center"
->
-  <img
-    src="/images/logo/rmed.svg"
-    alt="RadioMed Logo"
-    className="h-14 w-auto object-contain md:h-16"
-  />
-</a>
+                href="/"
+                className="relative z-10 flex items-center"
+              >
+                <img
+                  src="/images/logo/rmed.svg"
+                  alt="RadioMed Logo"
+                  className="h-12 w-auto object-contain"
+                />
+              </a>
 
               {/* CLOSE */}
               <button
                 onClick={() => setMobileMenu(false)}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white backdrop-blur-xl"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white backdrop-blur-xl"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
 
             {/* MOBILE LINKS */}
-            <div className="relative z-10 mt-10 flex flex-col px-6">
-              {[
-                "Home",
-                "About",
-                "Services",
-                "Sustainability",
-                "Expansion Vision",
-                "Investors",
-                "Contact",
-              ].map((item, index) => (
+            <div className="relative z-10 mt-6 flex flex-col px-6">
+              {navLinks.map((item, index) => (
                 <motion.a
                   key={index}
-                  href="/"
+                  href={item.href}
+                  onClick={() => setMobileMenu(false)}
                   initial={{
                     opacity: 0,
                     x: -20,
@@ -235,25 +189,29 @@ export default function Header() {
                     x: 0,
                   }}
                   transition={{
-                    duration: 0.5,
-                    delay: index * 0.06,
+                    duration: 0.45,
+                    delay: index * 0.05,
                   }}
-                  className="group flex items-center justify-between border-b border-white/5 py-6"
+                  className="group flex items-center justify-between border-b border-white/5 py-5"
                 >
-                  <span className="text-3xl font-bold tracking-tight text-white">
-                    {item}
+                  <span className="text-base font-medium tracking-tight text-white/90 transition-colors duration-300 group-hover:text-white">
+                    {item.name}
                   </span>
 
-                  <ArrowUpRight className="h-5 w-5 text-white/40 transition-all duration-300 group-hover:rotate-45 group-hover:text-red-400" />
+                  <ArrowUpRight className="h-4 w-4 text-white/30 transition-all duration-300 group-hover:rotate-45 group-hover:text-red-400" />
                 </motion.a>
               ))}
 
               {/* CTA */}
-              <button className="mt-10 flex items-center justify-center gap-3 rounded-full bg-red-500 px-6 py-5 text-sm font-semibold uppercase tracking-[0.18em] text-white">
+              <a
+                href="/contact"
+                onClick={() => setMobileMenu(false)}
+                className="mt-8 flex items-center justify-center gap-2 rounded-full bg-red-500 px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-red-600"
+              >
                 Book Appointment
 
                 <ArrowUpRight className="h-4 w-4" />
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
