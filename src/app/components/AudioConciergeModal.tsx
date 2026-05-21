@@ -34,7 +34,7 @@ export default function AudioConciergeModal() {
   return (
     <>
       {/* AUDIO ELEMENT */}
-      <audio ref={audioRef} src="/audio/wlc.wav" preload="auto" />
+      <audio ref={audioRef} src="/audio/welcome.m4a" preload="auto" />
 
       <AnimatePresence>
         {open && (

@@ -1,200 +1,388 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import {
+  Sun,
+  Leaf,
+  Zap,
+  ShieldCheck,
+  Activity,
+  ArrowUpRight,
+} from "lucide-react";
 
-const services = [
+const sustainabilityItems = [
   {
-    title: "Elderly Care",
-    slug: "elderly-care",
-    desc: "Compassionate, dignified support for elderly or physically challenged clients, from daily assistance and companionship to medication management and regular health monitoring, helping them live independently at home.",
-    image: "/images/blog/elderly-care.webp",
-    color: "bg-triage-teal",
+    icon: Sun,
+    title: "100% Solar Powered",
+    description:
+      "RadioMed facilities are designed around clean solar energy infrastructure for uninterrupted healthcare delivery.",
   },
   {
-    title: "Post-Surgery Care",
-    slug: "post-surgery-care",
-    desc: "Professional recovery support with vital signs monitoring, surgical site care, medication reminders, and early detection of complications, ensuring a smooth and safe healing process.",
-    image: "/images/blog/8.webp",
-    color: "bg-triage-purple",
+    icon: Zap,
+    title: "Reliable Operations",
+    description:
+      "Advanced energy systems eliminate downtime and reduce dependence on unstable power infrastructure.",
   },
   {
-    title: "Chronic Disease Management",
-    slug: "chronic-disease-management",
-    desc: "Ongoing support for conditions like diabetes and hypertension, including regular monitoring, medication guidance, and client education to help maintain stability and improve quality of life.",
-    image: "/images/blog/chronic-health.webp",
-    color: "bg-triage-navy",
+    icon: Leaf,
+    title: "Reduced Carbon Footprint",
+    description:
+      "Sustainable infrastructure designed to lower emissions while supporting modern healthcare delivery.",
   },
   {
-    title: "IV Therapy",
-    slug: "iv-therapy",
-    desc: "Safe administration of prescribed IV fluids, vitamins, and medications in the comfort of your home, delivered by trained healthcare professionals.",
-    image: "/images/blog/iv.png",
-    color: "bg-triage-orange",
-  },
-  {
-    title: "Wellness Check",
-    slug: "wellness-check",
-    desc: "A complete health review including vital signs check, risk assessment, and lifestyle consultation, helping you stay proactive about your health.",
-    image: "/images/blog/wellness-check.webp",
-    color: "bg-triage-lime",
-  },
-  {
-    title: "Health Screenings",
-    slug: "health-screening",
-    desc: "Quick and reliable on-the-spot tests including malaria, typhoid, HIV, blood pressure, glucose, and BMI, giving you clarity and peace of mind instantly.",
-    image: "/images/blog/hs.png",
-    color: "bg-[#ffbf00]",
-  },
-  {
-    title: "Wound Care",
-    slug: "wound-care",
-    desc: "Expert wound assessment, cleaning, dressing, and infection monitoring, ensuring proper healing and reducing the risk of complications.",
-    image: "/images/blog/7.webp",
-    color: "bg-triage-teal",
+    icon: ShieldCheck,
+    title: "Long-Term Infrastructure",
+    description:
+      "Built for scalability, operational resilience, and future healthcare expansion across Nigeria.",
   },
 ];
 
-export default function WhatWeDoTabs() {
-  const [active, setActive] = useState(0);
-
+export default function SustainabilitySection() {
   return (
-    <section className="relative py-28 px-6 overflow-hidden">
-
+    <section className="relative overflow-hidden bg-[#F5F7FA] py-32 text-[#071A3D]">
       {/* BACKGROUND */}
-      <div className="absolute inset-0 bg-triage-gray-50" />
-
-      {/* GRID */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(0deg,#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)] bg-[size:60px_60px]" />
-
-      {/* FLOATING SHAPES */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* SILVER GRADIENT */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.95),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(203,213,225,0.35),transparent_35%),linear-gradient(to_bottom,#F8FAFC,#EEF2F7,#F8FAFC)]" />
 
-        {[...Array(10)].map((_, i) => (
+        {/* GREEN GLOW */}
+        <motion.div
+          animate={{
+            y: [0, -40, 0],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+          }}
+          className="absolute left-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-emerald-400/10 blur-3xl"
+        />
 
-          <div
-            key={i}
-            className="absolute bg-white shadow-xl rounded-xl"
-            style={{
-              width: `${50 + i * 10}px`,
-              height: `${50 + i * 10}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              transform: "translate(-50%, -50%) rotate(20deg)",
-              opacity: 0.06,
-            }}
-          />
+        {/* CYAN GLOW */}
+        <motion.div
+          animate={{
+            y: [0, 30, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+          }}
+          className="absolute bottom-[-15%] right-[-10%] h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-3xl"
+        />
 
-        ))}
+        {/* GRID */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a08_1px,transparent_1px),linear-gradient(to_bottom,#0f172a08_1px,transparent_1px)] bg-[size:80px_80px]" />
 
+        {/* NOISE */}
+        <div className="absolute inset-0 opacity-[0.03] mix-blend-soft-light [background-image:url('https://grainy-gradients.vercel.app/noise.svg')]" />
       </div>
 
-      {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-
-        {/* HEADER */}
-        <div className="text-center mb-14">
-
-          <h2 className="text-4xl md:text-5xl font-semibold text-triage-navy font-raleway">
-            What We Do
-          </h2>
-
-          <p className="mt-4 text-triage-gray-600 text-lg font-nunito">
-            Personalized healthcare services designed around your needs.
-          </p>
-
-        </div>
-
-        {/* TABS */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
-
-          {services.map((tab, i) => (
-
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              className={`px-5 py-3 rounded-xl text-sm font-medium transition-all duration-300 border
-              ${
-                active === i
-                  ? `${tab.color} text-white border-transparent shadow-lg`
-                  : "text-triage-gray-600 bg-white border-triage-gray-200 hover:border-triage-orange"
-              }`}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+        {/* TOP */}
+        <div className="grid gap-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          {/* LEFT */}
+          <div>
+            {/* LABEL */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-8 flex items-center gap-4"
             >
-              {tab.title}
-            </button>
+              <div className="h-[1px] w-14 bg-emerald-500" />
 
-          ))}
+              <span className="text-sm uppercase tracking-[0.35em] text-emerald-600">
+                Sustainability / ESG
+              </span>
+            </motion.div>
 
-        </div>
+            {/* TITLE */}
+            <motion.h2
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.9,
+              }}
+              viewport={{ once: true }}
+              className="text-5xl font-black leading-[0.95] tracking-[-0.05em] md:text-7xl"
+            >
+              Sustainable
+              <span className="block text-emerald-500">
+                Infrastructure
+              </span>
+              For Modern Healthcare
+            </motion.h2>
 
-        {/* CONTENT */}
-        <AnimatePresence mode="wait">
+            {/* TEXT */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                delay: 0.1,
+              }}
+              viewport={{ once: true }}
+              className="mt-10 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl"
+            >
+              RadioMed integrates clean energy systems, reliable
+              infrastructure, and advanced healthcare technology to
+              create a more resilient and sustainable future for
+              diagnostic healthcare delivery across Nigeria.
+            </motion.p>
 
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, y: 40, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -30, scale: 0.98 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className={`rounded-3xl p-8 md:p-12 ${services[active].color} text-white shadow-xl`}
-          >
+            {/* MINI METRICS */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                delay: 0.2,
+              }}
+              viewport={{ once: true }}
+              className="mt-14 flex flex-wrap gap-4"
+            >
+              {[
+                "100% Solar Powered",
+                "Zero Diesel Dependency",
+                "Reliable Operations",
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-full border border-slate-200 bg-white/70 px-5 py-3 text-sm font-medium text-slate-700 shadow-[0_10px_40px_rgba(15,23,42,0.04)] backdrop-blur-xl"
+                >
+                  {item}
+                </div>
+              ))}
+            </motion.div>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-10 items-center">
+          {/* RIGHT VISUAL */}
+          <div className="relative">
+            {/* MAIN PANEL */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.96,
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              viewport={{ once: true }}
+              className="relative overflow-hidden rounded-[40px] bg-white/70 p-10 shadow-[0_30px_120px_rgba(15,23,42,0.08)] backdrop-blur-2xl"
+            >
+              {/* INTERNAL GLOW */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_35%)]" />
 
-              {/* TEXT */}
-              <div>
+              {/* CONTENT */}
+              <div className="relative z-10">
+                {/* TOP */}
+                <div className="flex items-center justify-between border-b border-slate-200 pb-8">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                      Clean Energy Infrastructure
+                    </p>
 
-                <h3 className="text-3xl md:text-4xl font-semibold font-raleway">
-                  {services[active].title}
-                </h3>
+                    <h3 className="mt-3 text-3xl font-bold">
+                      Reliable Healthcare Systems
+                    </h3>
+                  </div>
 
-                <p className="mt-5 text-white/90 text-lg leading-relaxed font-nunito">
-                  {services[active].desc}
-                </p>
-
-                <div className="mt-6 w-16 h-[2px] bg-white/70" />
-
-                {/* BUTTONS */}
-                <div className="mt-8 flex flex-wrap gap-4">
-
-                  <Link
-                    href={`/access-plans/${services[active].slug}`}
-                    className="inline-flex items-center justify-center rounded-2xl bg-white text-triage-navy px-6 py-3 text-sm font-semibold transition hover:scale-[1.02] hover:bg-white/90"
-                  >
-                    Learn More
-                  </Link>
-
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
-                  >
-                    Book Care
-                  </Link>
-
+                  <div className="rounded-2xl bg-emerald-100 p-4">
+                    <Sun className="h-6 w-6 text-emerald-600" />
+                  </div>
                 </div>
 
+                {/* CENTER VISUAL */}
+                <div className="relative mt-16 flex items-center justify-center">
+                  {/* OUTER RINGS */}
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.05, 1],
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                    }}
+                    className="absolute h-[340px] w-[340px] rounded-full border border-emerald-200"
+                  />
+
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.08, 1],
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                    }}
+                    className="absolute h-[260px] w-[260px] rounded-full border border-cyan-200"
+                  />
+
+                  {/* CENTER CORE */}
+                  <motion.div
+                    animate={{
+                      y: [0, -10, 0],
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                    }}
+                    className="relative flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-cyan-500 shadow-[0_20px_80px_rgba(16,185,129,0.25)]"
+                  >
+                    <Activity className="h-16 w-16 text-white" />
+                  </motion.div>
+
+                  {/* FLOATING METRIC */}
+                  <motion.div
+                    animate={{
+                      y: [0, -12, 0],
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                    }}
+                    className="absolute left-0 top-10 rounded-3xl bg-white px-6 py-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]"
+                  >
+                    <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
+                      Infrastructure
+                    </p>
+
+                    <h4 className="mt-2 text-3xl font-black text-[#071A3D]">
+                      100%
+                    </h4>
+
+                    <p className="mt-1 text-sm text-slate-500">
+                      Solar Powered
+                    </p>
+                  </motion.div>
+
+                  {/* FLOATING METRIC */}
+                  <motion.div
+                    animate={{
+                      y: [0, 10, 0],
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                    }}
+                    className="absolute bottom-0 right-0 rounded-3xl bg-[#071A3D] px-7 py-6 text-white shadow-[0_20px_80px_rgba(7,26,61,0.15)]"
+                  >
+                    <p className="text-xs uppercase tracking-[0.25em] text-white/60">
+                      Operations
+                    </p>
+
+                    <h4 className="mt-2 text-4xl text-white font-black">
+                      24/7
+                    </h4>
+
+                    <p className="mt-1 text-sm text-white/70">
+                      Reliable Healthcare Delivery
+                    </p>
+                  </motion.div>
+                </div>
               </div>
+            </motion.div>
+          </div>
+        </div>
 
-              {/* IMAGE */}
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+        {/* BOTTOM GRID */}
+        <div className="mt-32 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {sustainabilityItems.map((item, index) => {
+            const Icon = item.icon;
 
-                <img
-                  src={services[active].image}
-                  alt={services[active].title}
-                  className="w-full h-[320px] md:h-[380px] object-cover"
-                />
+            return (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 30,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.08,
+                }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-[32px] bg-white/70 p-8 shadow-[0_20px_80px_rgba(15,23,42,0.05)] backdrop-blur-2xl transition-all duration-500 hover:-translate-y-2"
+              >
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_40%)]" />
 
-              </div>
+                <div className="relative z-10">
+                  {/* ICON */}
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100">
+                    <Icon className="h-7 w-7 text-emerald-600" />
+                  </div>
 
-            </div>
+                  {/* TITLE */}
+                  <h3 className="text-2xl text-black font-bold tracking-tight">
+                    {item.title}
+                  </h3>
 
-          </motion.div>
+                  {/* TEXT */}
+                  <p className="mt-5 leading-relaxed text-slate-600">
+                    {item.description}
+                  </p>
 
-        </AnimatePresence>
+                  {/* BOTTOM LINE */}
+                  <motion.div
+                    initial={{
+                      width: 0,
+                    }}
+                    whileInView={{
+                      width: "100%",
+                    }}
+                    transition={{
+                      duration: 1,
+                    }}
+                    viewport={{ once: true }}
+                    className="mt-8 h-[1px] bg-gradient-to-r from-emerald-500 to-transparent"
+                  />
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
 
+        {/* BOTTOM STATEMENT */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{ once: true }}
+          className="mt-32 text-center"
+        >
+          <p className="mx-auto max-w-5xl text-3xl font-medium leading-relaxed tracking-tight text-slate-700 md:text-5xl">
+            Building healthcare infrastructure that is
+            <span className="text-emerald-500">
+              {" "}sustainable,
+            </span>
+            reliable, and designed for the future of
+            diagnostic care across Africa.
+          </p>
+        </motion.div>
       </div>
-
     </section>
   );
 }

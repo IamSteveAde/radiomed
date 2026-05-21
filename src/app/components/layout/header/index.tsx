@@ -1,154 +1,263 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  ArrowUpRight,
+  ChevronDown,
+  Menu,
+  X,
+} from "lucide-react";
 
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Access Plans", href: "/access-plans" },
-  { name: "TriageApp", href: "/triage-app" },
-  { name: "TriageConcierge", href: "/triage-concierge" },
-  { name: "Partnerships", href: "/partnerships" },
-  { name: "Contact", href: "/contact" },
-];
-
-export default function PremiumNavbar() {
+export default function Header() {
+  const [mobileMenu, setMobileMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [platformDropdown, setPlatformDropdown] =
+    useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      {/* NAVBAR */}
+      {/* HEADER */}
       <motion.header
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-white/90 backdrop-blur-xl shadow-sm"
-            : "bg-transparent"
+        initial={{
+          y: -80,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.8,
+        }}
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${
+          scrolled ? "py-4" : "py-6"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
-          {/* LOGO */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo/th.svg"
-              alt="TriageHome Logo"
-              width={140}
-              height={40}
-              priority
-              className={`transition-all duration-500 ${
-                scrolled
-                  ? "filter-none opacity-100"
-                  : "brightness-0 invert opacity-90"
-              }`}
-            />
-          </Link>
-
-          {/* NAV ITEMS */}
-          <div className="hidden md:flex items-center gap-8">
-
-            {navItems.map((item, i) => (
-              <Link key={i} href={item.href} className="relative group">
-
-                <div
-                  className={`flex items-center gap-2 text-sm font-medium transition ${
-                    scrolled ? "text-triage-navy" : "text-white"
-                  }`}
-                >
-                  {item.name}
-
-                  {/* arrow */}
-                  <motion.span
-                    className="text-xs"
-                    initial={{ rotate: 0 }}
-                    whileHover={{ rotate: -90 }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    →
-                  </motion.span>
-                </div>
-
-                {/* underline */}
-                <span className="absolute left-1/2 bottom-[-6px] h-[2px] w-0 bg-triage-orange transition-all duration-300 group-hover:w-full group-hover:left-0" />
-
-              </Link>
-            ))}
-
-          </div>
-
-          {/* MOBILE BUTTON */}
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div
-            className="md:hidden cursor-pointer"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            className={`relative flex items-center justify-between overflow-hidden rounded-full border transition-all duration-500 ${
+              scrolled
+                ? "border-white/10 bg-[#071A3D]/80 shadow-[0_20px_80px_rgba(2,6,23,0.25)] backdrop-blur-2xl"
+                : "border-white/10 bg-gradient-to-r from-[#071A3D]/70 via-[#0B1F47]/70 to-[#071A3D]/70 backdrop-blur-xl"
+            } px-5 py-1`}
           >
-            <div className="flex flex-col gap-1">
-              <span className={`w-6 h-[2px] ${scrolled ? "bg-black" : "bg-white"}`} />
-              <span className={`w-6 h-[2px] ${scrolled ? "bg-black" : "bg-white"}`} />
+            {/* BACKGROUND GLOWS */}
+            <div className="absolute inset-0 overflow-hidden rounded-full">
+              <div className="absolute left-[-10%] top-[-100%] h-[250px] w-[250px] rounded-full bg-red-500/10 blur-3xl" />
+
+              <div className="absolute bottom-[-100%] right-[-10%] h-[250px] w-[250px] rounded-full bg-cyan-500/10 blur-3xl" />
             </div>
+
+            {/* LOGO */}
+            <a
+  href="/"
+  className="relative z-10 flex items-center"
+>
+  <img
+    src="/images/logo/rmed.svg"
+    alt="RadioMed Logo"
+    className="h-14 w-auto object-contain md:h-16"
+  />
+</a>
+            {/* DESKTOP NAV */}
+            <nav className="relative z-10 hidden items-center gap-6 xl:flex">
+              {/* HOME */}
+              <a
+                href="/"
+                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
+              >
+                Home
+
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+
+              {/* ABOUT */}
+              <a
+                href="/about"
+                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
+              >
+                About
+
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+
+              {/* SERVICES */}
+              <a
+                href="/services"
+                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
+              >
+                Services
+
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+
+              {/* sustain */}
+              <a
+                href="/sustainability"
+                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
+              >
+                Sustainability / ESG
+
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+              
+              {/* INVESTORS */}
+              <a
+                href="/investors"
+                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
+              >
+                Investors
+
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+
+              {/* expansion */}
+              <a
+                href="/expansion"
+                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
+              >
+                Expansion Vision
+
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+
+
+
+              {/* CONTACT */}
+              <a
+                href="/contact"
+                className="group relative text-sm font-medium text-white/80 transition-colors duration-300 hover:text-white"
+              >
+                Contact
+
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+            </nav>
+
+            {/* RIGHT SIDE */}
+            <div className="relative z-10 hidden items-center gap-4 xl:flex">
+              {/* BADGE */}
+              
+
+              
+            </div>
+
+            {/* MOBILE BUTTON */}
+            <button
+              onClick={() => setMobileMenu(true)}
+              className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white backdrop-blur-xl xl:hidden"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
           </div>
-
         </div>
-
-        {/* CLEAN BORDER (NO GRADIENT) */}
-        <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
-
       </motion.header>
 
       {/* MOBILE MENU */}
       <AnimatePresence>
-        {mobileOpen && (
+        {mobileMenu && (
           <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.4 }}
-            className="fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col items-center justify-center gap-8"
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            className="fixed inset-0 z-[100] bg-[#020617]"
           >
+            {/* BACKGROUND */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute left-[-10%] top-[-10%] h-[400px] w-[400px] rounded-full bg-red-500/10 blur-3xl" />
 
-            {navItems.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-              >
-                <Link
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-2xl font-semibold text-triage-navy"
-                >
-                  {item.name}
-                </Link>
-              </motion.div>
-            ))}
+              <div className="absolute bottom-[-10%] right-[-10%] h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-3xl" />
 
-            {/* CTA */}
-            
-
-            {/* CLOSE */}
-            <div
-              onClick={() => setMobileOpen(false)}
-              className="absolute top-6 right-6 text-2xl text-triage-navy"
-            >
-              ✕
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
             </div>
 
+            {/* TOP */}
+            <div className="relative z-10 flex items-center justify-between px-6 py-8">
+              {/* LOGO */}
+              <a
+  href="/"
+  className="relative z-10 flex items-center"
+>
+  <img
+    src="/images/logo/rmed.svg"
+    alt="RadioMed Logo"
+    className="h-14 w-auto object-contain md:h-16"
+  />
+</a>
+
+              {/* CLOSE */}
+              <button
+                onClick={() => setMobileMenu(false)}
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white backdrop-blur-xl"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* MOBILE LINKS */}
+            <div className="relative z-10 mt-10 flex flex-col px-6">
+              {[
+                "Home",
+                "About",
+                "Services",
+                "Sustainability",
+                "Expansion Vision",
+                "Investors",
+                "Contact",
+              ].map((item, index) => (
+                <motion.a
+                  key={index}
+                  href="/"
+                  initial={{
+                    opacity: 0,
+                    x: -20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.06,
+                  }}
+                  className="group flex items-center justify-between border-b border-white/5 py-6"
+                >
+                  <span className="text-3xl font-bold tracking-tight text-white">
+                    {item}
+                  </span>
+
+                  <ArrowUpRight className="h-5 w-5 text-white/40 transition-all duration-300 group-hover:rotate-45 group-hover:text-red-400" />
+                </motion.a>
+              ))}
+
+              {/* CTA */}
+              <button className="mt-10 flex items-center justify-center gap-3 rounded-full bg-red-500 px-6 py-5 text-sm font-semibold uppercase tracking-[0.18em] text-white">
+                Book Appointment
+
+                <ArrowUpRight className="h-4 w-4" />
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-
     </>
   );
 }

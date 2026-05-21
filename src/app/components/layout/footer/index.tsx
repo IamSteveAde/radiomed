@@ -1,224 +1,304 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import {
+  ArrowUpRight,
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
+
+const quickLinks = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Investors",
+    href: "/investors",
+  },
+];
+
+const platformLinks = [
+  {
+    title: "Sustainability",
+    href: "/sustainability",
+  },
+  {
+    title: "Expansion Vision",
+    href: "/expansion",
+  },
+  {
+    title: "Partnerships",
+    href: "/partners",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+];
+
+const socials = [
+  {
+    icon: Instagram,
+    href: "#",
+  },
+  {
+    icon: Linkedin,
+    href: "#",
+  },
+  {
+    icon: Twitter,
+    href: "#",
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="relative pt-24 pb-10 px-6 overflow-hidden text-white">
+    <footer className="relative overflow-hidden bg-[#020617] text-white">
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* MAIN GRADIENT */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(229,9,20,0.18),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.12),transparent_30%),linear-gradient(to_bottom,#020617,#071A3D,#020617)]" />
 
-      {/* 🔷 BACKGROUND */}
-      <div className="absolute inset-0 pointer-events-none">
+        {/* GRID */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-        {/* NAVY BASE */}
-        <div className="absolute inset-0 bg-triage-navy" />
+        {/* GLOWS */}
+        <motion.div
+          animate={{
+            y: [0, -40, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+          }}
+          className="absolute left-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-red-500/10 blur-3xl"
+        />
 
-        {/* subtle radial accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(166,210,0,0.05),transparent_70%)]" />
-
-        {/* subtle grid */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(0deg,white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] bg-[size:60px_60px]" />
-
+        <motion.div
+          animate={{
+            y: [0, 30, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+          }}
+          className="absolute bottom-[-15%] right-[-10%] h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-3xl"
+        />
       </div>
 
-      {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-
-        {/* TOP GRID */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10">
-
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 lg:px-12">
+        {/* TOP */}
+        <div className="grid gap-16 border-b border-white/10 pb-20 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
           {/* BRAND */}
-          <div className="lg:col-span-2">
+          <div>
+            {/* LOGO */}
+            <a
+              href="/"
+              className="inline-flex items-center"
+            >
+              <img
+                src="/images/logo/rmed.svg"
+                alt="RadioMed Logo"
+                className="h-16 w-auto object-contain"
+              />
+            </a>
 
-            <img
-              src="/images/logo/th.svg"
-              alt="Triage Home Logo"
-              className="h-8 w-auto invert brightness-0"
-            />
-
-            <p className="mt-4 text-white/70 max-w-md leading-relaxed">
-              Delivering trusted, on-demand healthcare at home.  
-              Built for comfort, speed, and peace of mind.
+            {/* TEXT */}
+            <p className="mt-8 max-w-md text-lg leading-relaxed text-white/70">
+              RadioMed is building a scalable healthcare
+              infrastructure platform focused on advanced
+              diagnostics, sustainable operations, and improved
+              healthcare access across underserved communities in
+              Nigeria.
             </p>
 
-            {/* SOCIALS */}
-            <div className="mt-6 flex gap-4">
-
-  <a
-    href="https://www.instagram.com/triage.home?igsh=MWtkMnY2MjVicml1bA%3D%3D&utm_source=qr"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/10 hover:border-triage-orange hover:bg-white/20 transition"
-  >
-    <FaInstagram size={16} />
-  </a>
-
-  <a
-    href="https://www.facebook.com/share/1DoApgtZwN/?mibextid=wwXIfr"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/10 hover:border-triage-orange hover:bg-white/20 transition"
-  >
-    <FaFacebookF size={16} />
-  </a>
-
-  <a
-    href="https://www.linkedin.com/company/triagehome/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/10 hover:border-triage-orange hover:bg-white/20 transition"
-  >
-    <FaLinkedinIn size={16} />
-  </a>
-
-</div>
+            {/* CTA */}
+            
           </div>
 
-          {/* SERVICES */}
+          {/* QUICK LINKS */}
           <div>
-            <h4 className="text-sm font-semibold text-white/90 mb-4">
-              Services
-            </h4>
+            <h3 className="text-xl font-bold tracking-tight">
+              Quick Links
+            </h3>
 
-            <ul className="space-y-3 text-white/70">
+            <div className="mt-8 flex flex-col gap-5">
+              {quickLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="group flex items-center justify-between text-white/60 transition-all duration-300 hover:text-white"
+                >
+                  <span>{link.title}</span>
 
-  <li>
-    <Link
-      href="/services/elderly-care"
-      className="hover:text-triage-orange transition"
-    >
-      Elderly Care
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      href="/services/post-surgery-care"
-      className="hover:text-triage-orange transition"
-    >
-      Post-Surgery Care
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      href="/services/chronic-disease-management"
-      className="hover:text-triage-orange transition"
-    >
-      Chronic Disease Management
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      href="/services/iv-therapy"
-      className="hover:text-triage-orange transition"
-    >
-      IV Therapy
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      href="/services/wellness-check"
-      className="hover:text-triage-orange transition"
-    >
-      Wellness Check
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      href="/services/health-screening"
-      className="hover:text-triage-orange transition"
-    >
-      Health Screenings
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      href="/services/wound-care"
-      className="hover:text-triage-orange transition"
-    >
-      Wound Care
-    </Link>
-  </li>
-
-</ul>
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* COMPANY */}
+          {/* PLATFORM */}
           <div>
-            <h4 className="text-sm font-semibold text-white/90 mb-4">
-              Company
-            </h4>
+            <h3 className="text-xl font-bold tracking-tight">
+              Platform
+            </h3>
 
-            <ul className="space-y-3 text-white/70">
-              <li>
-                <Link href="/about" className="hover:text-triage-orange transition">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-triage-orange transition">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            <div className="mt-8 flex flex-col gap-5">
+              {platformLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="group flex items-center justify-between text-white/60 transition-all duration-300 hover:text-white"
+                >
+                  <span>{link.title}</span>
+
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* SOLUTIONS */}
+          {/* CONTACT */}
           <div>
-            <h4 className="text-sm font-semibold text-white/90 mb-4">
-              Solutions
-            </h4>
+            <h3 className="text-xl font-bold tracking-tight">
+              Contact
+            </h3>
 
-            <ul className="space-y-3 text-white/70">
-              <li>
-                <Link href="/triage-app" className="hover:text-triage-orange transition">
-                  TriageApp
-                </Link>
-              </li>
-              <li>
-                <Link href="/triage-pods" className="hover:text-triage-orange transition">
-                  TriagePods
-                </Link>
-              </li>
-              <li>
-                <Link href="/triage-living" className="hover:text-triage-orange transition">
-                  TriageLiving
-                </Link>
-              </li>
-            </ul>
+            <div className="mt-8 space-y-6">
+              {/* PHONE */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]">
+                  <Phone className="h-5 w-5 text-red-400" />
+                </div>
+
+                <div>
+                  <p className="text-sm uppercase tracking-[0.2em] text-white/40">
+                    Phone
+                  </p>
+
+                  <p className="mt-2 text-white/70">
+                    +234 806 872 1266
+                  </p>
+                </div>
+              </div>
+
+              {/* EMAIL */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]">
+                  <Mail className="h-5 w-5 text-red-400" />
+                </div>
+
+                <div>
+                  <p className="text-sm uppercase tracking-[0.2em] text-white/40">
+                    Email
+                  </p>
+
+                  <p className="mt-2 text-white/70">
+                    info@radiomed.com
+                  </p>
+                </div>
+              </div>
+
+              {/* LOCATION */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]">
+                  <MapPin className="h-5 w-5 text-red-400" />
+                </div>
+
+                <div>
+                  <p className="text-sm uppercase tracking-[0.2em] text-white/40">
+                    Location
+                  </p>
+
+                  <p className="mt-2 text-white/70">
+                    Ogun State, Nigeria
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
+
+        {/* MIDDLE CTA */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{ once: true }}
+          className="py-20 text-center"
+        >
+          <p className="mx-auto max-w-5xl text-3xl font-medium leading-relaxed tracking-tight text-white/80 md:text-5xl">
+            Building the future of
+            <span className="text-red-500">
+              {" "}advanced diagnostic healthcare </span>
+            across underserved communities in Africa.
+          </p>
+        </motion.div>
 
         {/* BOTTOM */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-white/60 text-sm">
+        <div className="flex flex-col items-center justify-between gap-8 border-t border-white/10 py-10 lg:flex-row">
+          {/* COPYRIGHT */}
+          <p className="text-sm text-white/40">
+            © {new Date().getFullYear()} RadioMed Technology
+            Limited. All rights reserved.
+          </p>
 
-          <p>© {new Date().getFullYear()} TriageHome. All rights reserved.</p>
+          {/* SOCIALS */}
+          <div className="flex items-center gap-4">
+            {socials.map((social, index) => {
+              const Icon = social.icon;
 
-          {/* CENTER (NEW) */}
-<p className="text-sm tracking-widest uppercase font-medium bg-gradient-to-r from-triage-orange via-triage-teal to-triage-purple bg-clip-text text-transparent animate-gradient">
-  Made in Africa
-</p>
-
-          <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-triage-orange transition">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-triage-orange transition">
-              Terms and condition
-            </Link>
+              return (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="group flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/60 backdrop-blur-xl transition-all duration-300 hover:border-red-500/30 hover:bg-red-500 hover:text-white"
+                >
+                  <Icon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+                </a>
+              );
+            })}
           </div>
 
+          {/* LEGAL */}
+          <div className="flex items-center gap-8 text-sm text-white/40">
+            <a
+              href="#"
+              className="transition-colors duration-300 hover:text-white"
+            >
+              Privacy Policy
+            </a>
+
+            <a
+              href="#"
+              className="transition-colors duration-300 hover:text-white"
+            >
+              Terms & Conditions
+            </a>
+          </div>
         </div>
-
       </div>
-
     </footer>
   );
 }

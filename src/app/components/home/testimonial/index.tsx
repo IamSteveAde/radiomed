@@ -1,210 +1,426 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useState } from "react";
-import type { FormEvent } from "react";
+import {
+  ArrowRight,
+  CalendarDays,
+  Building2,
+  PhoneCall,
+  X,
+} from "lucide-react";
 
-export default function BookingSection() {
-  const [service, setService] = useState("Home Care");
-  const [time, setTime] = useState("Now");
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  const form = e.currentTarget;
-
-  const location = (form.elements.namedItem("Location") as HTMLInputElement).value;
-  const name = (form.elements.namedItem("Name") as HTMLInputElement).value;
-  const phone = (form.elements.namedItem("Phone") as HTMLInputElement).value;
-
-  if (!service || !time) {
-    alert("Please select service and time");
-    return;
-  }
-
-  // ✅ Google Sheets
-  fetch("https://script.google.com/macros/s/AKfycbxiVVOZY8pAxFFN26xcAQ8n5LgJjnBeELYvvWmr7SZPHPVUCDECUk6kFfJ9GLqJL0r3/exec", {
-    method: "POST",
-    body: JSON.stringify({
-      service,
-      time,
-      location,
-      name,
-      phone,
-    }),
-  }).catch((err) => console.log("Sheet error:", err));
-
-  // ✅ WhatsApp
-  const message = `
-Hello, I’d like to request care service.
-
-*New Booking Request*
-
-*Service:* ${service}
-*Time:* ${time}
-*Location:* ${location}
-
-*Name:* ${name}
-*Phone:* ${phone}
-  `;
-
-  const url = `https://wa.me/2349134664547?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-};
- 
+export default function FinalCTASection() {
+  const [modal, setModal] = useState<
+    null | "appointment" | "partner"
+  >(null);
 
   return (
-    <section className="relative py-32 px-6 overflow-hidden text-white bg-triage-navy">
+    <>
+      <section className="relative overflow-hidden bg-[#020617] py-24 text-white md:py-32">
+        {/* BACKGROUND */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* MAIN GRADIENT */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(229,9,20,0.22),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.18),transparent_30%),linear-gradient(to_bottom,#020617,#071A3D,#020617)]" />
 
-      {/* 🌌 SUBTLE BACKGROUND */}
-      <div className="absolute inset-0">
+          {/* GRID */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-        {/* soft radial accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(166,210,0,0.05),transparent_70%)]" />
-
-        {/* grid */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(0deg,white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] bg-[size:60px_60px]" />
-
-      </div>
-
-      <div className="relative z-10 max-w-4xl mx-auto">
-
-        {/* HEADER */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold text-white">
-            Get care in minutes
-          </h2>
-
-          <p className="mt-4 text-white/70 text-lg">
-            Tell us what you need, we’ll handle the rest.
-          </p>
+          {/* NOISE */}
+          <div className="absolute inset-0 opacity-[0.03] mix-blend-soft-light [background-image:url('https://grainy-gradients.vercel.app/noise.svg')]" />
         </div>
 
-        {/* FORM CARD */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="p-8 md:p-10 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.6)]"
-        >
+        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+          {/* MAIN CTA CONTAINER */}
+          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04] px-6 py-16 backdrop-blur-2xl md:rounded-[48px] md:px-16 md:py-20">
+            {/* INTERNAL GLOW */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(229,9,20,0.18),transparent_35%)]" />
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* TOP LABEL */}
+            <div className="relative z-10 mb-10 flex items-center justify-center gap-4">
+              <div className="h-[1px] w-14 bg-red-500" />
 
-            {/* SERVICE */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-white/80">
-                What do you need?
-              </label>
+              <span className="text-xs uppercase tracking-[0.3em] text-red-400 sm:text-sm sm:tracking-[0.35em]">
+                Transforming Healthcare Access
+              </span>
 
-              <div className="flex flex-wrap gap-3">
-                {["Elderly Care", "Post-Surgery Care", "Chronic Disease Management", "IV Therapy", "Wellness Check", "Health Screenings", "Wound Care"].map(
-                  (item) => (
-                    <button
-                      type="button"
-                      key={item}
-                      onClick={() => setService(item)}
-                      className={`px-4 py-2 rounded-full border transition ${
-                        service === item
-                          ? "bg-triage-orange text-white border-transparent"
-                          : "border-white/20 text-white/70 hover:border-triage-orange"
-                      }`}
-                    >
-                      {item}
-                    </button>
-                  )
-                )}
+              <div className="h-[1px] w-14 bg-red-500" />
+            </div>
+
+            {/* MAIN CONTENT */}
+            <div className="relative z-10 mx-auto max-w-5xl text-center">
+              {/* TITLE */}
+              <h2 className="text-4xl font-black leading-[0.95] tracking-[-0.05em] text-white sm:text-5xl md:text-7xl">
+                Bringing
+                <span className="block text-red-500">
+                  World-Class Diagnostics
+                </span>
+                Closer To Home
+              </h2>
+
+              {/* TEXT */}
+              <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg md:text-xl">
+                RadioMed is redefining access to diagnostic
+                healthcare through advanced imaging, sustainable
+                infrastructure, and globally connected healthcare
+                delivery designed for underserved communities
+                across Nigeria.
+              </p>
+
+              {/* CTA BUTTONS */}
+              <div className="mt-14 flex flex-col items-center justify-center gap-5 sm:flex-row">
+                {/* BOOK APPOINTMENT */}
+                <button
+                  onClick={() => setModal("appointment")}
+                  className="group flex items-center gap-3 rounded-full bg-red-500 px-8 py-5 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-red-600"
+                >
+                  Book Appointment
+
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+
+                {/* PARTNER */}
+                <button
+                  onClick={() => setModal("partner")}
+                  className="group flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-8 py-5 text-sm font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-xl transition-all duration-300 hover:border-red-500/30 hover:bg-white/[0.08]"
+                >
+                  Partner With RadioMed
+
+                  <Building2 className="h-4 w-4 transition-transform duration-300 group-hover:rotate-6" />
+                </button>
+              </div>
+            </div>
+
+            {/* TRUST ITEMS */}
+            <div className="relative z-10 mt-16 grid gap-6 md:mt-20 md:grid-cols-3">
+              {/* ITEM */}
+              <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10">
+                  <CalendarDays className="h-7 w-7 text-red-400" />
+                </div>
+
+                <h3 className="mt-8 text-2xl font-bold">
+                  Fast Access
+                </h3>
+
+                <p className="mt-4 leading-relaxed text-slate-400">
+                  Faster diagnostics, same-day reporting, and
+                  technology-driven healthcare delivery designed
+                  around patients.
+                </p>
               </div>
 
-              <input type="hidden" text-white name="Service" value={service} />
-            </div>
+              {/* ITEM */}
+              <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10">
+                  <Building2 className="h-7 w-7 text-red-400" />
+                </div>
 
-            {/* LOCATION */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-white/80">
-                Your location
-              </label>
+                <h3 className="mt-8 text-2xl font-bold">
+                  Institutional Partnerships
+                </h3>
 
-              <input
-                type="text"
-                text-white
-                name="Location"
-                required
-                placeholder="Enter your address"
-                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-triage-orange"
-              />
-            </div>
-
-            {/* TIME */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-white/80">
-                When do you need care?
-              </label>
-
-              <div className="flex gap-3">
-                {["Now", "Schedule"].map((item) => (
-                  <button
-                    type="button"
-                    key={item}
-                    onClick={() => setTime(item)}
-                    className={`px-4 py-2 rounded-full border transition ${
-                      time === item
-                        ? "bg-triage-orange text-white border-transparent"
-                        : "border-white/20 text-white/70 hover:border-triage-orange"
-                    }`}
-                  >
-                    {item}
-                  </button>
-                ))}
+                <p className="mt-4 leading-relaxed text-slate-400">
+                  Collaborating with hospitals, HMOs, corporate
+                  organizations, and healthcare institutions across
+                  Nigeria.
+                </p>
               </div>
 
-              <input type="hidden" text-white name="Time" value={time} />
+              {/* ITEM */}
+              <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10">
+                  <PhoneCall className="h-7 w-7 text-red-400" />
+                </div>
+
+                <h3 className="mt-8 text-2xl font-bold">
+                  Connected Care
+                </h3>
+
+                <p className="mt-4 leading-relaxed text-slate-400">
+                  Delivering advanced diagnostics supported by
+                  global healthcare partnerships and modern
+                  clinical infrastructure.
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* NAME */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-white/80">
-                Your name
-              </label>
-
-              <input
-                type="text"
-                name="Name"
-                text-white
-                required
-                placeholder="Full name"
-                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-triage-orange"
-              />
-            </div>
-
-            {/* PHONE */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-white/80">
-                Phone number
-              </label>
-
-              <input
-                type="tel"
-                name="Phone"
-                text-color ="white"
-                required
-                placeholder="080..."
-                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-triage-orange"
-              />
-            </div>
-
-            {/* CTA */}
+      {/* MODAL */}
+      {modal && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-5 backdrop-blur-md">
+          <div className="relative max-h-[95vh] w-full max-w-3xl overflow-y-auto rounded-[32px] bg-white shadow-2xl">
+            {/* CLOSE */}
             <button
-              type="submit"
-              className="w-full py-4 rounded-xl bg-triage-orange hover:bg-[#8c5c27] transition text-white font-semibold flex items-center justify-center gap-2"
+              onClick={() => setModal(null)}
+              className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-[#F5F7FA]"
             >
-              Find a Provider →
+              <X className="h-5 w-5 text-[#071A3D]" />
             </button>
 
-          </form>
+            {/* HEADER */}
+            <div className="border-b border-slate-100 px-8 py-8">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#E50914]">
+                RadioMed
+              </p>
 
-        </motion.div>
+              <h3 className="mt-3 text-3xl font-black text-[#071A3D]">
+                {modal === "appointment"
+                  ? "Book Diagnostic Appointment"
+                  : "Partnership Inquiry"}
+              </h3>
 
-      </div>
+              <p className="mt-4 text-slate-600">
+                {modal === "appointment"
+                  ? "Complete the appointment request form and our healthcare team will contact you shortly."
+                  : "Tell us about your organization and partnership interest."}
+              </p>
+            </div>
 
-    </section>
+            {/* FORM */}
+            <form
+              action="https://formsubmit.co/adediranstephen2000@gmail.com"
+              method="POST"
+              className="space-y-6 px-8 py-8"
+            >
+              {/* FORMSUBMIT CONFIG */}
+              <input
+                type="hidden"
+                name="_captcha"
+                value="false"
+              />
+
+              <input
+                type="hidden"
+                name="_template"
+                value="table"
+              />
+
+              <input
+                type="hidden"
+                name="_subject"
+                value={`RadioMed ${
+                  modal === "appointment"
+                    ? "Appointment Request"
+                    : "Partnership Inquiry"
+                }`}
+              />
+
+              {/* APPOINTMENT FORM */}
+              {modal === "appointment" ? (
+                <>
+                  {/* PERSONAL INFO */}
+                  <div>
+                    <h4 className="mb-5 text-lg font-bold text-[#071A3D]">
+                      Personal Information
+                    </h4>
+
+                    <div className="grid gap-6 md:grid-cols-2">
+                      <input
+                        type="text"
+                        name="Full Name"
+                        placeholder="Full Name"
+                        required
+                        className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                      />
+
+                      <input
+                        type="email"
+                        name="Email"
+                        placeholder="Email Address"
+                        required
+                        className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                      />
+
+                      <input
+                        type="tel"
+                        name="Phone Number"
+                        placeholder="Phone Number"
+                        required
+                        className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                      />
+
+                      <input
+                        type="number"
+                        name="Age"
+                        placeholder="Age"
+                        className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                      />
+                    </div>
+                  </div>
+
+                  {/* APPOINTMENT DETAILS */}
+                  <div>
+                    <h4 className="mb-5 text-lg font-bold text-[#071A3D]">
+                      Appointment Details
+                    </h4>
+
+                    <div className="grid gap-6 md:grid-cols-2">
+                      <select
+                        name="Service Required"
+                        required
+                        className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                      >
+                        <option value="">
+                          Select Service
+                        </option>
+
+                        <option>CT Scan Imaging</option>
+
+                        <option>MRI Imaging</option>
+
+                        <option>Digital X-Ray</option>
+
+                        <option>Ultrasound</option>
+
+                        <option>Laboratory Diagnostics</option>
+
+                        <option>Telemedicine Consultation</option>
+                      </select>
+
+                      <input
+                        type="date"
+                        name="Preferred Date"
+                        required
+                        className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                      />
+
+                      <select
+                        name="Preferred Time"
+                        required
+                        className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                      >
+                        <option value="">
+                          Preferred Time
+                        </option>
+
+                        <option>8:00 AM</option>
+
+                        <option>9:00 AM</option>
+
+                        <option>10:00 AM</option>
+
+                        <option>11:00 AM</option>
+
+                        <option>12:00 PM</option>
+
+                        <option>1:00 PM</option>
+
+                        <option>2:00 PM</option>
+
+                        <option>3:00 PM</option>
+
+                        <option>4:00 PM</option>
+                      </select>
+
+                      <select
+                        name="Referral Type"
+                        className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                      >
+                        <option>Self Referral</option>
+
+                        <option>Doctor Referral</option>
+
+                        <option>Hospital Referral</option>
+
+                        <option>Insurance Referral</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* MESSAGE */}
+                  <div>
+                    <textarea
+                      name="Additional Information"
+                      rows={5}
+                      placeholder="Additional Information or Symptoms"
+                      className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                    />
+                  </div>
+                </>
+              ) : (
+                <>
+                  {/* PARTNERSHIP FORM */}
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <input
+                      type="text"
+                      name="Full Name"
+                      placeholder="Full Name"
+                      required
+                      className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                    />
+
+                    <input
+                      type="text"
+                      name="Organization"
+                      placeholder="Organization"
+                      required
+                      className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                    />
+
+                    <input
+                      type="email"
+                      name="Email"
+                      placeholder="Email Address"
+                      required
+                      className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                    />
+
+                    <input
+                      type="tel"
+                      name="Phone Number"
+                      placeholder="Phone Number"
+                      required
+                      className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                    />
+                  </div>
+
+                  <select
+                    name="Partnership Type"
+                    required
+                    className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                  >
+                    <option value="">
+                      Select Partnership Type
+                    </option>
+
+                    <option>Hospital Partnership</option>
+
+                    <option>HMO Partnership</option>
+
+                    <option>Corporate Partnership</option>
+
+                    <option>Government Partnership</option>
+
+                    <option>Healthcare Technology</option>
+
+                    <option>International Collaboration</option>
+                  </select>
+
+                  <textarea
+                    name="Message"
+                    rows={6}
+                    placeholder="Tell us about your partnership interest"
+                    required
+                    className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none focus:border-[#E50914]"
+                  />
+                </>
+              )}
+
+              {/* SUBMIT */}
+              <button
+                type="submit"
+                className="w-full rounded-2xl bg-[#071A3D] px-8 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-[#E50914]"
+              >
+                {modal === "appointment"
+                  ? "Submit Appointment Request"
+                  : "Submit Partnership Inquiry"}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

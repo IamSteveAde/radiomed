@@ -1,218 +1,450 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ArrowUpRight,
+  Clock3,
+  Globe2,
+} from "lucide-react";
 
-const contactItems = [
+const contactInfo = [
   {
     icon: Phone,
-    title: "Call Us",
-    desc: "+234 913 466 4547",
+    title: "Phone",
+    value: "+234 806 872 1266",
+    description: "Speak with our healthcare support team.",
   },
   {
     icon: Mail,
     title: "Email",
-    desc: "support@triage-home.com",
+    value: "info@radiomed.com",
+    description: "For inquiries, partnerships, and support.",
   },
   {
     icon: MapPin,
-    title: "Visit",
-    desc: "No 14, Chief Yesufu Abiodun Oniru Rd. V.I, Lagos",
+    title: "Location",
+    value: "Ogun State, Nigeria",
+    description: "Healthcare infrastructure for underserved communities.",
+  },
+];
+
+const supportItems = [
+  {
+    icon: Clock3,
+    title: "Fast Response",
+    text: "Our team responds quickly to appointments, partnerships, and healthcare inquiries.",
+  },
+  {
+    icon: Globe2,
+    title: "Institutional Partnerships",
+    text: "Collaborating with hospitals, HMOs, and healthcare organizations across Nigeria.",
   },
 ];
 
 export default function ContactPage() {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative overflow-hidden bg-[#F8FAFC] text-[#071A3D]">
+      {/* HERO */}
+      <section className="relative overflow-hidden pt-44">
+        {/* BACKGROUND */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* GRADIENT */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(229,9,20,0.08),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_30%),linear-gradient(to_bottom,#FFFFFF,#F5F7FA,#FFFFFF)]" />
 
-      {/* ================= HERO ================= */}
-      <section className="relative min-h-screen flex items-center justify-center text-white px-6">
+          {/* GRID */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a08_1px,transparent_1px),linear-gradient(to_bottom,#0f172a08_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-        <div className="absolute inset-0 -z-10">
-
-          <img
-            src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2000"
-            alt="Healthcare background"
-            className="w-full h-full object-cover"
+          {/* GLOW */}
+          <motion.div
+            animate={{
+              y: [0, -40, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+            }}
+            className="absolute left-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-red-500/5 blur-3xl"
           />
 
-          <div className="absolute inset-0 bg-triage-navy/85" />
-
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(166,210,0,0.08),transparent_60%)]" />
-
+          <motion.div
+            animate={{
+              y: [0, 30, 0],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+            }}
+            className="absolute bottom-[-15%] right-[-10%] h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-3xl"
+          />
         </div>
 
-        <div className="text-center max-w-3xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pb-32 lg:px-12">
+          {/* TOP */}
+          <div className="grid gap-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            {/* LEFT */}
+            <div>
+              {/* LABEL */}
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.6,
+                }}
+                viewport={{ once: true }}
+                className="mb-8 flex items-center gap-4"
+              >
+                <div className="h-[1px] w-14 bg-[#E50914]" />
 
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-            <span className="text-white">
-              Let’s talk about your care
-            </span>
-            <br />
-            <span className="text-triage-teal">
-              We’re here to help
-            </span>
-          </h1>
+                <span className="text-sm uppercase tracking-[0.35em] text-[#E50914]">
+                  Contact RadioMed
+                </span>
+              </motion.div>
 
-          <p className="mt-6 text-white/80 text-lg">
-            Whether you need immediate care, ongoing support, or have a question, our team is ready to assist you.
-          </p>
+              {/* TITLE */}
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                  y: 35,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.9,
+                }}
+                viewport={{ once: true }}
+                className="text-5xl font-black leading-[0.95] tracking-[-0.05em] md:text-7xl"
+              >
+                Let’s Build The
+                <span className="block text-[#E50914]">
+                  Future Of Healthcare
+                </span>
+                Together
+              </motion.h1>
+            </div>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-
-            <a
-              href="https://wa.me/2349134664547?text=Hello%20Triage%2C%20I%20need%20assistance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full bg-triage-orange text-white font-medium flex items-center gap-2"
+            {/* RIGHT */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 35,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                delay: 0.1,
+              }}
+              viewport={{ once: true }}
             >
-              <MessageCircle size={18} />
-              Chat on WhatsApp
-            </a>
+              <p className="text-lg leading-relaxed text-slate-600 md:text-xl">
+                Whether you are looking to book an appointment,
+                explore institutional partnerships, or learn more
+                about RadioMed’s healthcare infrastructure vision,
+                our team is ready to connect with you.
+              </p>
 
-            <a
-              href="#form"
-              className="px-8 py-4 rounded-full border border-white/20 hover:border-triage-orange transition"
-            >
-              Send a Message
-            </a>
-
+              
+            </motion.div>
           </div>
 
-        </div>
-      </section>
+          {/* CONTACT GRID */}
+          <div className="mt-24 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+            {/* LEFT */}
+            <div className="space-y-6">
+              {contactInfo.map((item, index) => {
+                const Icon = item.icon;
 
-      {/* ================= CONTACT OPTIONS ================= */}
-      <section className="py-24 px-6 bg-triage-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{
+                      opacity: 0,
+                      y: 30,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      delay: index * 0.08,
+                    }}
+                    viewport={{ once: true }}
+                    className="group relative overflow-hidden rounded-[32px] bg-white p-8 shadow-[0_20px_80px_rgba(15,23,42,0.05)] transition-all duration-500 hover:-translate-y-2"
+                  >
+                    {/* GLOW */}
+                    <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_top_right,rgba(229,9,20,0.08),transparent_40%)]" />
 
-          {contactItems.map((item, i) => {
-            const Icon = item.icon;
+                    <div className="relative z-10 flex items-start gap-5">
+                      {/* ICON */}
+                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F5F7FA]">
+                        <Icon className="h-7 w-7 text-[#E50914]" />
+                      </div>
 
-            return (
+                      {/* CONTENT */}
+                      <div>
+                        <h3 className="text-2xl text-black font-bold tracking-tight">
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-3 text-lg font-medium text-[#071A3D]">
+                          {item.value}
+                        </p>
+
+                        <p className="mt-3 leading-relaxed text-slate-600">
+                          {item.description}
+                        </p>
+
+                        <motion.div
+                          initial={{
+                            width: 0,
+                          }}
+                          whileInView={{
+                            width: "100%",
+                          }}
+                          transition={{
+                            duration: 1,
+                          }}
+                          viewport={{ once: true }}
+                          className="mt-6 h-[1px] bg-gradient-to-r from-[#E50914] to-transparent"
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+
+              {/* SUPPORT BOX */}
               <motion.div
-                key={i}
-                whileHover={{ y: -6 }}
-                className="p-6 rounded-2xl border border-triage-gray-200 shadow-sm text-center bg-white"
+                initial={{
+                  opacity: 0,
+                  y: 30,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.8,
+                }}
+                viewport={{ once: true }}
+                className="relative overflow-hidden rounded-[32px] bg-[#071A3D] p-8 text-white"
               >
-                <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-xl bg-triage-teal text-white mb-4">
-                  <Icon size={20} />
+                {/* GLOW */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(229,9,20,0.18),transparent_35%)]" />
+
+                <div className="relative z-10">
+                  {supportItems.map((item, index) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <div
+                        key={index}
+                        className={`${
+                          index !== 0
+                            ? "mt-8 border-t border-white/10 pt-8"
+                            : ""
+                        }`}
+                      >
+                        <div className="flex items-start gap-5">
+                          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
+                            <Icon className="h-6 w-6 text-red-400" />
+                          </div>
+
+                          <div>
+                            <h3 className="text-2xl font-bold">
+                              {item.title}
+                            </h3>
+
+                            <p className="mt-4 leading-relaxed text-white/70">
+                              {item.text}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* RIGHT - FORM */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              viewport={{ once: true }}
+              className="relative overflow-hidden rounded-[40px] bg-white p-10 shadow-[0_30px_120px_rgba(15,23,42,0.06)]"
+            >
+              {/* GLOW */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(229,9,20,0.06),transparent_35%)]" />
+
+              <div className="relative z-10">
+                {/* HEADER */}
+                <div className="border-b border-slate-200 pb-8">
+                  <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                    Contact Form
+                  </p>
+
+                  <h2 className="mt-4 text-4xl font-black tracking-tight">
+                    Send Us A Message
+                  </h2>
                 </div>
 
-                <h3 className="font-semibold text-triage-navy text-lg">
-                  {item.title}
-                </h3>
+                {/* FORM */}
+                <form
+  action="https://formsubmit.co/adediranstephen2000@gmail.com"
+  method="POST"
+  className="mt-10 space-y-6"
+>
+  {/* FORMSUBMIT CONFIG */}
+  <input type="hidden" name="_captcha" value="false" />
 
-                <p className="mt-2 text-triage-gray-600">
-                  {item.desc}
-                </p>
-              </motion.div>
-            );
-          })}
-        </div>
-      </section>
+  <input type="hidden" name="_template" value="table" />
 
-      {/* ================= FORM ================= */}
-      <section id="form" className="py-32 px-6 bg-white">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+  <input
+    type="hidden"
+    name="_subject"
+    value="RadioMed Contact Form Submission"
+  />
 
-          <div>
-            <h2 className="text-3xl md:text-4xl font-semibold text-triage-navy">
-              Send us a message
-            </h2>
+  {/* ROW */}
+  <div className="grid gap-6 md:grid-cols-2">
+    <div>
+      <label className="mb-3 block text-sm font-medium text-slate-600">
+        First Name
+      </label>
 
-            <p className="mt-4 text-triage-gray-600">
-              Fill out the form and our team will get back to you shortly.
-            </p>
+      <input
+        type="text"
+        name="First Name"
+        placeholder="John"
+        required
+        className="h-14 w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 text-[#071A3D] outline-none transition-all duration-300 focus:border-[#E50914]"
+      />
+    </div>
+
+    <div>
+      <label className="mb-3 block text-sm font-medium text-slate-600">
+        Last Name
+      </label>
+
+      <input
+        type="text"
+        name="Last Name"
+        placeholder="Doe"
+        required
+        className="h-14 w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 text-[#071A3D] outline-none transition-all duration-300 focus:border-[#E50914]"
+      />
+    </div>
+  </div>
+
+  {/* EMAIL */}
+  <div>
+    <label className="mb-3 block text-sm font-medium text-slate-600">
+      Email Address
+    </label>
+
+    <input
+      type="email"
+      name="Email Address"
+      placeholder="you@example.com"
+      required
+      className="h-14 w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 text-[#071A3D] outline-none transition-all duration-300 focus:border-[#E50914]"
+    />
+  </div>
+
+  {/* SUBJECT */}
+  <div>
+    <label className="mb-3 block text-sm font-medium text-slate-600">
+      Subject
+    </label>
+
+    <input
+      type="text"
+      name="Subject"
+      placeholder="Partnership Inquiry"
+      required
+      className="h-14 w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 text-[#071A3D] outline-none transition-all duration-300 focus:border-[#E50914]"
+    />
+  </div>
+
+  {/* MESSAGE */}
+  <div>
+    <label className="mb-3 block text-sm font-medium text-slate-600">
+      Message
+    </label>
+
+    <textarea
+      rows={6}
+      name="Message"
+      placeholder="Tell us more about your inquiry..."
+      required
+      className="w-full rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-5 text-[#071A3D] outline-none transition-all duration-300 focus:border-[#E50914]"
+    />
+  </div>
+
+  {/* BUTTON */}
+  <button
+    type="submit"
+    className="group flex items-center gap-3 rounded-full bg-[#071A3D] px-8 py-5 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-all duration-500 hover:bg-[#E50914]"
+  >
+    Send Message
+
+    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
+  </button>
+</form>
+              </div>
+            </motion.div>
           </div>
 
-          <form
-            className="bg-white p-8 rounded-2xl shadow-lg border border-triage-gray-200 space-y-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-
-              const form = e.currentTarget;
-
-              const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-              const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-              const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
-
-              const text = `New Contact Message:
-Name: ${name}
-Email: ${email}
-Message: ${message}`;
-
-              const whatsappUrl = `https://wa.me/2349134664547?text=${encodeURIComponent(text)}`;
-
-              window.open(whatsappUrl, "_blank");
-
-              form.reset();
+          {/* BOTTOM STATEMENT */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
             }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            viewport={{ once: true }}
+            className="mt-28 text-center"
           >
-
-            <input
-              name="name"
-              type="text"
-              placeholder="Full Name"
-              required
-              className="w-full p-4 rounded-lg border border-gray-200 outline-none focus:border-triage-teal"
-            />
-
-            <input
-              name="email"
-              type="email"
-              placeholder="Email Address"
-              required
-              className="w-full p-4 rounded-lg border border-gray-200 outline-none focus:border-triage-teal"
-            />
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows={4}
-              required
-              className="w-full p-4 rounded-lg border border-gray-200 outline-none focus:border-triage-teal"
-            />
-
-            <button
-              type="submit"
-              className="w-full py-4 rounded-lg bg-triage-orange text-white font-medium hover:opacity-90 transition"
-            >
-              Send Message
-            </button>
-
-          </form>
-
+            <p className="mx-auto max-w-5xl text-3xl font-medium leading-relaxed tracking-tight text-slate-700 md:text-5xl">
+              Connecting communities to
+              <span className="text-[#E50914]">
+                {" "}advanced healthcare infrastructure
+              </span>
+              designed for the future of diagnostic access.
+            </p>
+          </motion.div>
         </div>
       </section>
-
-      {/* ================= FINAL CTA ================= */}
-      <section className="relative py-24 px-6 text-center text-white">
-
-        <div className="absolute inset-0 bg-triage-navy" />
-
-        <div className="relative z-10 max-w-3xl mx-auto">
-
-          <h2 className="text-3xl md:text-4xl font-semibold text-white">
-            Need care urgently?
-          </h2>
-
-          <p className="mt-4 text-white/80">
-            Our concierge is available 24/7 on WhatsApp.
-          </p>
-
-          <a
-            href="https://wa.me/2349134664547"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-6 px-8 py-4 rounded-full bg-triage-orange text-white font-medium"
-          >
-            Talk to Concierge
-          </a>
-
-        </div>
-      </section>
-
     </main>
   );
 }

@@ -13,8 +13,8 @@ const config: Config = {
       ...extendedConfig,
 
       fontFamily: {
-        heading: ["Raleway", "sans-serif"],
-        body: ["Nunito", "sans-serif"],
+        heading: ["Plus Jakarta Sans", "sans-serif"],
+        body: ["Plus Jakarta Sans", "sans-serif"],
       },
     },
   },

@@ -9,9 +9,7 @@ import Listing from "./components/home/property-list";
 import Testimonials from "./components/home/testimonial";
 import History from "./components/home/history";
 import Typess from "./components/home/types";
-import Soln from "./components/home/soln";
-import Faq from "./components/home/faq";
-import Vid from "./components/home/vids";
+
 import Soon from "./components/soon";
 
 
@@ -161,9 +159,9 @@ export default function Home() {
        <History />
        <Soon />
         <Typess />
-        <Vid />
-           <Soln />
-              <Faq />
+    
+        
+            
 
       {/* Trust & social proof */}
       <Testimonials />
