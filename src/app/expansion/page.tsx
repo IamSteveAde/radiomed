@@ -25,7 +25,7 @@ const rolloutLocations = [
     city: "Ota",
     status: "Industrial Healthcare Corridor",
     top: "42%",
-    left: "55%",
+    left: "50%",
   },
   {
     city: "Sagamu",
@@ -206,209 +206,211 @@ export default function ExpansionVisionPage() {
 
           {/* ROADMAP */}
           <div className="relative mt-20 md:mt-28">
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.97,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
-              transition={{
-                duration: 1,
-              }}
-              viewport={{ once: true }}
-              className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#071A3D] p-6 text-white shadow-[0_30px_120px_rgba(7,26,61,0.15)] md:rounded-[48px] md:p-10"
-            >
-              {/* GLOW */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(229,9,20,0.18),transparent_35%)]" />
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.97,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    transition={{
+      duration: 1,
+    }}
+    viewport={{ once: true }}
+    className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[#071A3D] p-4 text-white shadow-[0_30px_120px_rgba(7,26,61,0.15)] sm:p-6 md:rounded-[48px] md:p-10"
+  >
+    {/* GLOW */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(229,9,20,0.18),transparent_35%)]" />
 
-              {/* TOP */}
-              <div className="relative z-10 flex flex-col gap-6 border-b border-white/10 pb-8 md:flex-row md:items-center md:justify-between">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.3em] text-white/50">
-                    Expansion Roadmap
-                  </p>
+    {/* TOP */}
+    <div className="relative z-10 flex flex-col gap-5 border-b border-white/10 pb-6 md:flex-row md:items-center md:justify-between md:pb-8">
+      <div>
+        <p className="text-[10px] uppercase tracking-[0.28em] text-white/50 md:text-xs">
+          Expansion Roadmap
+        </p>
 
-                  <h3 className="mt-3 text-3xl font-black md:text-5xl">
-                    Ogun State Rollout
-                  </h3>
-                </div>
+        <h3 className="mt-3 text-2xl font-black leading-tight md:text-5xl">
+          Ogun State Rollout
+        </h3>
+      </div>
 
-                <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-white/10">
-                  <Globe2 className="h-7 w-7 text-red-400" />
-                </div>
-              </div>
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 md:h-16 md:w-16 md:rounded-3xl">
+        <Globe2 className="h-6 w-6 text-red-400 md:h-7 md:w-7" />
+      </div>
+    </div>
 
-              {/* MAP */}
-              <div className="relative mt-10 h-[500px] overflow-hidden rounded-[28px] bg-gradient-to-br from-[#0F172A] to-[#020617] md:h-[700px] md:rounded-[36px]">
-                {/* GRID */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+    {/* MAP */}
+    <div className="relative mt-8 h-[520px] overflow-hidden rounded-[24px] bg-gradient-to-br from-[#0F172A] to-[#020617] sm:h-[620px] md:mt-10 md:h-[700px] md:rounded-[36px]">
+      {/* GRID */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-                {/* MAP IMAGE */}
-                <img
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1800&auto=format&fit=crop"
-                  alt="Expansion Map"
-                  className="absolute inset-0 h-full w-full object-cover opacity-10"
-                />
+      {/* MAP IMAGE */}
+      <img
+        src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1800&auto=format&fit=crop"
+        alt="Expansion Map"
+        className="absolute inset-0 h-full w-full object-cover opacity-10"
+      />
 
-                {/* CONNECTING LINES */}
-                <svg
-                  className="absolute inset-0 h-full w-full"
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                >
-                  {/* MAIN PATH */}
-                  <motion.path
-                    d="M32 18 C42 28, 48 35, 55 42 C48 52, 42 60, 40 65"
-                    stroke="url(#gradient)"
-                    strokeWidth="0.5"
-                    fill="none"
-                    initial={{
-                      pathLength: 0,
-                    }}
-                    whileInView={{
-                      pathLength: 1,
-                    }}
-                    transition={{
-                      duration: 2,
-                    }}
-                  />
+      {/* CONNECTING LINES */}
+      <svg
+        className="absolute inset-0 h-full w-full"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        {/* MAIN PATH */}
+        <motion.path
+          d="M32 18 C42 28, 48 35, 55 42 C48 52, 42 60, 40 65"
+          stroke="url(#gradient)"
+          strokeWidth="0.5"
+          fill="none"
+          initial={{
+            pathLength: 0,
+          }}
+          whileInView={{
+            pathLength: 1,
+          }}
+          transition={{
+            duration: 2,
+          }}
+        />
 
-                  {/* FUTURE NETWORK */}
-                  <motion.path
-                    d="M55 42 C70 30, 78 25, 88 18"
-                    stroke="url(#gradient2)"
-                    strokeWidth="0.4"
-                    fill="none"
-                    initial={{
-                      pathLength: 0,
-                    }}
-                    whileInView={{
-                      pathLength: 1,
-                    }}
-                    transition={{
-                      duration: 2,
-                      delay: 0.4,
-                    }}
-                  />
+        {/* FUTURE NETWORK */}
+        <motion.path
+          d="M55 42 C70 30, 78 25, 88 18"
+          stroke="url(#gradient2)"
+          strokeWidth="0.4"
+          fill="none"
+          initial={{
+            pathLength: 0,
+          }}
+          whileInView={{
+            pathLength: 1,
+          }}
+          transition={{
+            duration: 2,
+            delay: 0.4,
+          }}
+        />
 
-                  <defs>
-                    <linearGradient
-                      id="gradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="0%"
-                    >
-                      <stop offset="0%" stopColor="#EF4444" />
+        <defs>
+          <linearGradient
+            id="gradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop offset="0%" stopColor="#EF4444" />
 
-                      <stop offset="100%" stopColor="#06B6D4" />
-                    </linearGradient>
+            <stop offset="100%" stopColor="#06B6D4" />
+          </linearGradient>
 
-                    <linearGradient
-                      id="gradient2"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="0%"
-                    >
-                      <stop offset="0%" stopColor="#06B6D4" />
+          <linearGradient
+            id="gradient2"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop offset="0%" stopColor="#06B6D4" />
 
-                      <stop offset="100%" stopColor="#EF4444" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+            <stop offset="100%" stopColor="#EF4444" />
+          </linearGradient>
+        </defs>
+      </svg>
 
-                {/* LOCATIONS */}
-                {rolloutLocations.map((location, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{
-                      opacity: 0,
-                      scale: 0.8,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      scale: 1,
-                    }}
-                    transition={{
-                      duration: 0.8,
-                      delay: index * 0.2,
-                    }}
-                    viewport={{ once: true }}
-                    style={{
-                      top: location.top,
-                      left: location.left,
-                    }}
-                    className="absolute"
-                  >
-                    {/* PULSE */}
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.8, 1],
-                        opacity: [0.5, 0, 0.5],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        delay: index * 0.5,
-                      }}
-                      className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full border border-red-500/30"
-                    />
+      {/* LOCATIONS */}
+      {rolloutLocations.map((location, index) => (
+        <motion.div
+          key={index}
+          initial={{
+            opacity: 0,
+            scale: 0.8,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.8,
+            delay: index * 0.2,
+          }}
+          viewport={{ once: true }}
+          style={{
+            top: location.top,
+            left: location.left,
+          }}
+          className="absolute"
+        >
+          {/* PULSE */}
+          <motion.div
+            animate={{
+              scale: [1, 1.8, 1],
+              opacity: [0.5, 0, 0.5],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: index * 0.5,
+            }}
+            className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 rounded-full border border-red-500/30 md:h-16 md:w-16"
+          />
 
-                    {/* DOT */}
-                    <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-red-500 shadow-[0_0_40px_rgba(239,68,68,0.5)]">
-                      <MapPin className="h-6 w-6 text-white" />
-                    </div>
-
-                    {/* LABEL */}
-                    <div className="absolute left-20 top-1/2 -translate-y-1/2 whitespace-nowrap">
-                      <p className="text-lg font-bold text-white">
-                        {location.city}
-                      </p>
-
-                      <p className="text-sm text-slate-400">
-                        {location.status}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-
-                {/* FUTURE EXPANSION */}
-                <div className="absolute bottom-6 right-6 max-w-sm rounded-[28px] border border-white/10 bg-white/[0.05] p-6 backdrop-blur-2xl md:bottom-10 md:right-10 md:p-8">
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10">
-                      <Radar className="h-7 w-7 text-red-400" />
-                    </div>
-
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.3em] text-white/50">
-                        Future Expansion
-                      </p>
-
-                      <h4 className="mt-3 text-2xl font-black text-white">
-                        National Rollout
-                      </h4>
-                    </div>
-                  </div>
-
-                  {/* CITIES */}
-                  <div className="mt-8 flex flex-wrap gap-3">
-                    {futureExpansion.map((city, index) => (
-                      <div
-                        key={index}
-                        className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/80"
-                      >
-                        {city}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+          {/* DOT */}
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-red-500 shadow-[0_0_40px_rgba(239,68,68,0.5)] md:h-14 md:w-14">
+            <MapPin className="h-4 w-4 text-white md:h-6 md:w-6" />
           </div>
+
+          {/* LABEL */}
+          <div className="absolute left-12 top-1/2 w-[110px] -translate-y-1/2 md:left-20 md:w-auto">
+            <p className="break-words text-xs font-bold leading-tight text-white md:text-lg">
+              {location.city}
+            </p>
+
+            <p className="mt-1 break-words text-[10px] leading-tight text-slate-400 md:text-sm">
+              {location.status}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* FUTURE EXPANSION CARD - NOW OUTSIDE MAP */}
+    <div className="relative z-10 mt-6 rounded-[24px] border border-white/10 bg-white/[0.05] p-5 backdrop-blur-2xl md:mt-8 md:rounded-[28px] md:p-8">
+      <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div className="flex items-start gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-red-500/10 md:h-16 md:w-16">
+            <Radar className="h-5 w-5 text-red-400 md:h-7 md:w-7" />
+          </div>
+
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.28em] text-white/50 md:text-xs">
+              Future Expansion
+            </p>
+
+            <h4 className="mt-2 text-xl font-black text-white md:mt-3 md:text-2xl">
+              National Rollout
+            </h4>
+          </div>
+        </div>
+
+        {/* CITIES */}
+        <div className="flex flex-wrap gap-2 md:max-w-[60%] md:justify-end">
+          {futureExpansion.map((city, index) => (
+            <div
+              key={index}
+              className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-white/80 md:px-4 md:py-2 md:text-sm"
+            >
+              {city}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </motion.div>
+</div>
         </div>
       </section>
 

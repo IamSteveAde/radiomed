@@ -165,134 +165,170 @@ export default function SustainabilitySection() {
 
           {/* RIGHT VISUAL */}
           <div className="relative">
-            {/* MAIN PANEL */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.96,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
-              transition={{
-                duration: 1,
-              }}
-              viewport={{ once: true }}
-              className="relative overflow-hidden rounded-[40px] bg-white/70 p-10 shadow-[0_30px_120px_rgba(15,23,42,0.08)] backdrop-blur-2xl"
-            >
-              {/* INTERNAL GLOW */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_35%)]" />
+  {/* MAIN PANEL */}
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.96,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    transition={{
+      duration: 1,
+    }}
+    viewport={{ once: true }}
+    className="relative overflow-hidden rounded-[28px] bg-white/70 p-5 shadow-[0_30px_120px_rgba(15,23,42,0.08)] backdrop-blur-2xl md:rounded-[40px] md:p-10"
+  >
+    {/* INTERNAL GLOW */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_35%)]" />
 
-              {/* CONTENT */}
-              <div className="relative z-10">
-                {/* TOP */}
-                <div className="flex items-center justify-between border-b border-slate-200 pb-8">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
-                      Clean Energy Infrastructure
-                    </p>
+    {/* CONTENT */}
+    <div className="relative z-10">
+      {/* TOP */}
+      <div className="flex flex-col gap-5 border-b border-slate-200 pb-6 md:flex-row md:items-center md:justify-between md:pb-8">
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.28em] text-slate-400 md:text-xs">
+            Clean Energy Infrastructure
+          </p>
 
-                    <h3 className="mt-3 text-3xl font-bold">
-                      Reliable Healthcare Systems
-                    </h3>
-                  </div>
+          <h3 className="mt-3 text-2xl text-black font-bold leading-tight md:text-3xl">
+            Reliable Healthcare Systems
+          </h3>
+        </div>
 
-                  <div className="rounded-2xl bg-emerald-100 p-4">
-                    <Sun className="h-6 w-6 text-emerald-600" />
-                  </div>
-                </div>
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 md:h-auto md:w-auto md:p-4">
+          <Sun className="h-6 w-6 text-emerald-600" />
+        </div>
+      </div>
 
-                {/* CENTER VISUAL */}
-                <div className="relative mt-16 flex items-center justify-center">
-                  {/* OUTER RINGS */}
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                    }}
-                    className="absolute h-[340px] w-[340px] rounded-full border border-emerald-200"
-                  />
+      {/* CENTER VISUAL */}
+      <div className="relative mt-12 flex flex-col items-center md:mt-16">
+        {/* VISUAL AREA */}
+        <div className="relative flex h-[280px] w-full items-center justify-center md:h-[420px]">
+          {/* OUTER RINGS */}
+          <motion.div
+            animate={{
+              scale: [1, 1.05, 1],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+            }}
+            className="absolute h-[220px] w-[220px] rounded-full border border-emerald-200 md:h-[340px] md:w-[340px]"
+          />
 
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.08, 1],
-                    }}
-                    transition={{
-                      duration: 8,
-                      repeat: Infinity,
-                    }}
-                    className="absolute h-[260px] w-[260px] rounded-full border border-cyan-200"
-                  />
+          <motion.div
+            animate={{
+              scale: [1, 1.08, 1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+            }}
+            className="absolute h-[170px] w-[170px] rounded-full border border-cyan-200 md:h-[260px] md:w-[260px]"
+          />
 
-                  {/* CENTER CORE */}
-                  <motion.div
-                    animate={{
-                      y: [0, -10, 0],
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                    }}
-                    className="relative flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-cyan-500 shadow-[0_20px_80px_rgba(16,185,129,0.25)]"
-                  >
-                    <Activity className="h-16 w-16 text-white" />
-                  </motion.div>
+          {/* CENTER CORE */}
+          <motion.div
+            animate={{
+              y: [0, -10, 0],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+            }}
+            className="relative z-10 flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-cyan-500 shadow-[0_20px_80px_rgba(16,185,129,0.25)] md:h-40 md:w-40"
+          >
+            <Activity className="h-10 w-10 text-white md:h-16 md:w-16" />
+          </motion.div>
 
-                  {/* FLOATING METRIC */}
-                  <motion.div
-                    animate={{
-                      y: [0, -12, 0],
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                    }}
-                    className="absolute left-0 top-10 rounded-3xl bg-white px-6 py-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]"
-                  >
-                    <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
-                      Infrastructure
-                    </p>
+          {/* DESKTOP FLOATING CARD 1 */}
+          <motion.div
+            animate={{
+              y: [0, -12, 0],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+            }}
+            className="absolute left-0 top-10 hidden rounded-3xl bg-white px-6 py-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:block"
+          >
+            <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
+              Infrastructure
+            </p>
 
-                    <h4 className="mt-2 text-3xl font-black text-[#071A3D]">
-                      100%
-                    </h4>
+            <h4 className="mt-2 text-3xl font-black text-[#071A3D]">
+              100%
+            </h4>
 
-                    <p className="mt-1 text-sm text-slate-500">
-                      Solar Powered
-                    </p>
-                  </motion.div>
+            <p className="mt-1 text-sm text-slate-500">
+              Solar Powered
+            </p>
+          </motion.div>
 
-                  {/* FLOATING METRIC */}
-                  <motion.div
-                    animate={{
-                      y: [0, 10, 0],
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                    }}
-                    className="absolute bottom-0 right-0 rounded-3xl bg-[#071A3D] px-7 py-6 text-white shadow-[0_20px_80px_rgba(7,26,61,0.15)]"
-                  >
-                    <p className="text-xs uppercase tracking-[0.25em] text-white/60">
-                      Operations
-                    </p>
+          {/* DESKTOP FLOATING CARD 2 */}
+          <motion.div
+            animate={{
+              y: [0, 10, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+            }}
+            className="absolute bottom-0 right-0 hidden rounded-3xl bg-[#071A3D] px-7 py-6 text-white shadow-[0_20px_80px_rgba(7,26,61,0.15)] md:block"
+          >
+            <p className="text-xs uppercase tracking-[0.25em] text-white/60">
+              Operations
+            </p>
 
-                    <h4 className="mt-2 text-4xl text-white font-black">
-                      24/7
-                    </h4>
+            <h4 className="mt-2 text-4xl font-black text-white">
+              24/7
+            </h4>
 
-                    <p className="mt-1 text-sm text-white/70">
-                      Reliable Healthcare Delivery
-                    </p>
-                  </motion.div>
-                </div>
-              </div>
-            </motion.div>
+            <p className="mt-1 text-sm text-white/70">
+              Reliable Healthcare Delivery
+            </p>
+          </motion.div>
+        </div>
+
+        {/* MOBILE METRICS */}
+        <div className="mt-8 grid w-full gap-4 md:hidden">
+          {/* MOBILE CARD 1 */}
+          <div className="rounded-3xl bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.06)]">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-slate-400">
+              Infrastructure
+            </p>
+
+            <h4 className="mt-2 text-3xl font-black text-[#071A3D]">
+              100%
+            </h4>
+
+            <p className="mt-1 text-sm text-slate-500">
+              Solar Powered
+            </p>
           </div>
+
+          {/* MOBILE CARD 2 */}
+          <div className="rounded-3xl bg-[#071A3D] p-5 text-white shadow-[0_20px_80px_rgba(7,26,61,0.12)]">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+              Operations
+            </p>
+
+            <h4 className="mt-2 text-3xl font-black text-white">
+              24/7
+            </h4>
+
+            <p className="mt-1 text-sm text-white/70">
+              Reliable Healthcare Delivery
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </motion.div>
+</div>
         </div>
 
         {/* BOTTOM GRID */}

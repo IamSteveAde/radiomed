@@ -202,16 +202,7 @@ export default function Header() {
                 </motion.a>
               ))}
 
-              {/* CTA */}
-              <a
-                href="/contact"
-                onClick={() => setMobileMenu(false)}
-                className="mt-8 flex items-center justify-center gap-2 rounded-full bg-red-500 px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-red-600"
-              >
-                Book Appointment
-
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
+              
             </div>
           </motion.div>
         )}
