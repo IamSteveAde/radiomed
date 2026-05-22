@@ -130,7 +130,7 @@ export default function ExpansionVisionSection() {
               viewport={{ once: true }}
               className="mt-8 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg md:text-xl"
             >
-              RadioMed is developing a scalable diagnostic
+              Radio Medicine Technology Limited is developing a scalable diagnostic
               healthcare network designed to expand advanced
               imaging infrastructure across underserved cities in
               Nigeria — beginning with Ogun State and expanding

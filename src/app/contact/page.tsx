@@ -105,7 +105,7 @@ export default function ContactPage() {
                 <div className="h-[1px] w-14 bg-[#E50914]" />
 
                 <span className="text-sm uppercase tracking-[0.35em] text-[#E50914]">
-                  Contact RadioMed
+                  Contact Radio Medicine Technology Limited
                 </span>
               </motion.div>
 
@@ -152,7 +152,7 @@ export default function ContactPage() {
               <p className="text-lg leading-relaxed text-slate-600 md:text-xl">
                 Whether you are looking to book an appointment,
                 explore institutional partnerships, or learn more
-                about RadioMed’s healthcare infrastructure vision,
+                about Radio Medicine Technology Limited’s healthcare infrastructure vision,
                 our team is ready to connect with you.
               </p>
 

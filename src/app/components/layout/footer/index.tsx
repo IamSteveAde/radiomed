@@ -118,7 +118,7 @@ export default function Footer() {
 
             {/* TEXT */}
             <p className="mt-8 max-w-md text-lg leading-relaxed text-white/70">
-              RadioMed is building a scalable healthcare
+              Radio Medicine Technology limited is building a scalable healthcare
               infrastructure platform focused on advanced
               diagnostics, sustainable operations, and improved
               healthcare access across underserved communities in
