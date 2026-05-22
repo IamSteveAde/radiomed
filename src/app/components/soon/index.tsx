@@ -22,7 +22,7 @@ const locations = [
     left: "52%",
   },
   {
-    city: "Sagamu",
+    city: "Ijebu Ode",
     status: "Growth Corridor",
     top: "58%",
     left: "42%",

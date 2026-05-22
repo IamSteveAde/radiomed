@@ -28,7 +28,7 @@ const rolloutLocations = [
     left: "50%",
   },
   {
-    city: "Sagamu",
+    city: "Iebu Ode",
     status: "Regional Expansion",
     top: "65%",
     left: "40%",
