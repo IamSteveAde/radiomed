@@ -313,71 +313,75 @@ export default function InvestorsPartnershipPage() {
         </section>
 
         {/* SCALABLE MODEL */}
-        <section className="relative bg-[#071A3D] py-24 text-white md:py-32">
-          <div className="mx-auto grid max-w-7xl gap-16 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
-            {/* LEFT */}
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-400">
-                Scalable Business Model
-              </p>
+        <section className="relative overflow-hidden bg-[#071A3D] py-20 text-white sm:py-24 lg:py-32">
+  <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-12">
+    
+    {/* LEFT */}
+    <div className="min-w-0">
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-red-400 sm:text-sm">
+        Scalable Business Model
+      </p>
 
-              <h2 className="mt-6 text-white text-4xl font-black leading-[1] tracking-tight md:text-6xl">
-                Designed For Long-Term National Expansion
-              </h2>
+      <h2 className="mt-5 break-words text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+        Designed For Long-Term National Expansion
+      </h2>
 
-              <p className="mt-8 text-lg leading-relaxed text-white/70">
-                Radio Medicine Technology Limited combines advanced diagnostics,
-                infrastructure reliability, healthcare technology,
-                and partnership-driven growth into a scalable
-                operational healthcare platform.
-              </p>
+      <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
+        Radio Medicine Technology Limited combines advanced diagnostics,
+        infrastructure reliability, healthcare technology, and
+        partnership-driven growth into a scalable operational healthcare
+        platform.
+      </p>
+    </div>
+
+    {/* RIGHT */}
+    <div className="min-w-0 rounded-[28px] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl sm:p-7 md:rounded-[36px] md:p-10">
+      
+      {/* ICON */}
+      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10 sm:h-20 sm:w-20 sm:rounded-3xl">
+        <Activity className="h-7 w-7 text-red-400 sm:h-9 sm:w-9" />
+      </div>
+
+      {/* GROWTH POINTS */}
+      <div className="mt-8 space-y-4 sm:mt-10 sm:space-y-5">
+        {growthPoints.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-start gap-3 rounded-2xl border border-white/5 bg-white/[0.03] p-4 sm:gap-4 sm:p-5"
+          >
+            <div className="mt-1 shrink-0">
+              <CheckCircle2 className="h-5 w-5 text-red-400" />
             </div>
 
-            {/* RIGHT */}
-            <div className="rounded-[36px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl md:p-10">
-              <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-red-500/10">
-                <Activity className="h-9 w-9 text-red-400" />
-              </div>
-
-              <div className="mt-10 space-y-5">
-                {growthPoints.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-5"
-                  >
-                    <div className="mt-1">
-                      <CheckCircle2 className="h-5 w-5 text-red-400" />
-                    </div>
-
-                    <p className="flex-1 leading-relaxed text-white/80">
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* FLOATING METRIC */}
-              <div className="mt-10 rounded-[28px] border border-white/10 bg-white/[0.03] p-8">
-                <div className="flex items-center gap-5">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10">
-                    <Globe2 className="h-7 w-7 text-red-400" />
-                  </div>
-
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/50">
-                      Expansion Focus
-                    </p>
-
-                    <h4 className="mt-3 text-3xl font-black text-white">
-                      Infrastructure-Led Growth
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p className="min-w-0 flex-1 break-words text-sm leading-relaxed text-white/80 sm:text-base">
+              {item}
+            </p>
           </div>
-        </section>
+        ))}
+      </div>
 
+      {/* FLOATING METRIC */}
+      <div className="mt-8 rounded-[24px] border border-white/10 bg-white/[0.03] p-5 sm:mt-10 sm:rounded-[28px] sm:p-8">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+          
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-red-500/10 sm:h-16 sm:w-16">
+            <Globe2 className="h-6 w-6 text-red-400 sm:h-7 sm:w-7" />
+          </div>
+
+          <div className="min-w-0">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-white/50 sm:text-xs">
+              Expansion Focus
+            </p>
+
+            <h4 className="mt-2 break-words text-xl font-black leading-tight text-white sm:mt-3 sm:text-2xl lg:text-3xl">
+              Infrastructure-Led Growth
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         {/* BOTTOM STATEMENT */}
         <section className="relative pb-24 pt-24 md:pb-32">
           <div className="mx-auto max-w-6xl px-5 text-center sm:px-6 lg:px-12">
