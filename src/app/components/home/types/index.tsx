@@ -283,7 +283,7 @@ export default function InvestorPartnershipSection() {
       {/* HEADER */}
       <div className="border-b border-slate-100 bg-gradient-to-br from-[#071A3D] to-[#0A2454] px-5 pb-8 pt-14 sm:px-8 sm:pt-12">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-400">
-          RadioMed
+          Radio Medicine Technology Limited
         </p>
 
         <h2 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">
