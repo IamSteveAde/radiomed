@@ -28,12 +28,12 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "RadioMed Technology | Advanced Diagnostic Healthcare in Nigeria",
-    template: "%s | RadioMed Technology",
+      "Radio Medicine Technology Limited | Advanced Diagnostic Healthcare in Nigeria",
+    template: "%s | Radio Medicine Technology Limited",
   },
 
   description:
-    "RadioMed Technology is transforming diagnostic healthcare in Nigeria through advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure. Access MRI imaging, CT scans, digital X-ray, ultrasound, laboratory diagnostics, and specialist healthcare support.",
+    "Radio Medicine Technology Limited is transforming diagnostic healthcare in Nigeria through advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure. Access MRI imaging, CT scans, digital X-ray, ultrasound, laboratory diagnostics, and specialist healthcare support.",
 
   keywords: [
     "diagnostic healthcare Nigeria",
@@ -65,27 +65,27 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "RadioMed Technology",
+      name: "Radio Medicine Technology Limited",
       url: "https://www.radiomedtech.com",
     },
   ],
 
-  creator: "RadioMed Technology",
+  creator: "Radio Medicine Technology Limited",
 
-  publisher: "RadioMed Technology",
+  publisher: "Radio Medicine Technology Limited",
 
   category: "Healthcare",
 
   openGraph: {
     title:
-      "RadioMed Technology | Advanced Diagnostic Healthcare in Nigeria",
+      "Radio Medicine Technology Limited | Advanced Diagnostic Healthcare in Nigeria",
 
     description:
       "Advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure built for underserved communities across Nigeria.",
 
     url: "https://www.radiomedtech.com",
 
-    siteName: "RadioMed Technology",
+    siteName: "Radio Medicine Technology Limited",
 
     locale: "en_NG",
 
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
         url: "https://www.radiomedtech.com/images/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "RadioMed Technology Diagnostic Healthcare Infrastructure",
+        alt: "Radio Medicine Technology Limited Diagnostic Healthcare Infrastructure",
       },
     ],
   },
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "RadioMed Technology | Diagnostic Healthcare Infrastructure",
+      "Radio Medicine Technology Limited | Diagnostic Healthcare Infrastructure",
 
     description:
       "Book advanced diagnostic services including MRI, CT scans, ultrasound, digital X-ray, laboratory diagnostics, and specialist healthcare support.",

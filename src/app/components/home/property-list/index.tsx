@@ -112,7 +112,7 @@ export default function WhyRadiomedSection() {
               <div className="h-[1px] w-14 bg-red-500" />
 
               <span className="text-sm uppercase tracking-[0.35em] text-red-400">
-                Why RadioMed
+                Why Radio Medicine Technology Limited
               </span>
             </motion.div>
 
@@ -144,7 +144,7 @@ export default function WhyRadiomedSection() {
               viewport={{ once: true }}
               className="mt-10 max-w-xl text-lg leading-relaxed text-slate-300 md:text-xl"
             >
-              RadioMed combines healthcare infrastructure,
+              Radio Medicine Technology Limited combines healthcare infrastructure,
               advanced diagnostics, sustainability, and operational
               reliability into one integrated platform designed for
               modern African healthcare delivery.
@@ -364,7 +364,7 @@ export default function WhyRadiomedSection() {
         >
           <p className="mx-auto max-w-5xl text-3xl font-medium leading-relaxed tracking-tight text-slate-300 md:text-5xl"
           >
-            RadioMed is not simply building
+            Radio Medicine Technology Limited is not simply building
             <span className="text-red-500">
               {" "}diagnostic centers.
             </span>

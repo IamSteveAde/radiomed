@@ -67,7 +67,7 @@ export default function HealthcareGapSection() {
               <div className="h-[1px] w-16 bg-red-500" />
 
               <span className="text-sm uppercase tracking-[0.35em] text-red-400">
-              ABOUT RADIOMED TECHNOLOGY
+              ABOUT Radio Medicine Technology Limited
               </span>
             </motion.div>
 
@@ -103,7 +103,7 @@ export default function HealthcareGapSection() {
               healthcare outcomes.
               <br />
               <br />
-              RadioMed is building modern diagnostic infrastructure
+              Radio Medicine Technology Limited is building modern diagnostic infrastructure
               designed to close this gap through advanced imaging,
               clean energy systems, and globally connected healthcare
               delivery.

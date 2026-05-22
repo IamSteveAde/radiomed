@@ -59,7 +59,7 @@ export default function FinalCTASection() {
 
               {/* TEXT */}
               <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg md:text-xl">
-                RadioMed is redefining access to diagnostic
+                Radio Medicine Technology Limited is redefining access to diagnostic
                 healthcare through advanced imaging, sustainable
                 infrastructure, and globally connected healthcare
                 delivery designed for underserved communities
@@ -83,7 +83,7 @@ export default function FinalCTASection() {
                   onClick={() => setModal("partner")}
                   className="group flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-8 py-5 text-sm font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-xl transition-all duration-300 hover:border-red-500/30 hover:bg-white/[0.08]"
                 >
-                  Partner With RadioMed
+                  Partner With Radio Medicine Technology Limited
 
                   <Building2 className="h-4 w-4 transition-transform duration-300 group-hover:rotate-6" />
                 </button>
@@ -162,7 +162,7 @@ export default function FinalCTASection() {
             {/* HEADER */}
             <div className="border-b border-slate-100 px-8 py-8">
               <p className="text-xs uppercase tracking-[0.3em] text-[#E50914]">
-                RadioMed
+                Radio Medicine Technology Limited
               </p>
 
               <h3 className="mt-3 text-3xl font-black text-[#071A3D]">

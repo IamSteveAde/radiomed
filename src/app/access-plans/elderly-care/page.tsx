@@ -146,7 +146,7 @@ export default function ElderlyCarePage() {
               Trusted Elderly Care Services
             </div>
 
-            <h1 className="mt-8 text-5xl text-white lg:text-7xl font-semibold leading-tight tracking-tight font-raleway">
+            <h1 className="mt-8 text-5xl text-white lg:text-7xl font-semibold leading-tight tracking-tight font-Plus Jakarta Sans">
 
               Compassionate
 
@@ -237,7 +237,7 @@ export default function ElderlyCarePage() {
               Elderly Care Services
             </p>
 
-            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold tracking-tight font-raleway text-[#02385a]">
+            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold tracking-tight font-Plus Jakarta Sans text-[#02385a]">
               Comprehensive In-Home Support For Seniors
             </h2>
 
@@ -272,7 +272,7 @@ export default function ElderlyCarePage() {
 />
                   </div>
 
-                  <h3 className="mt-6 text-2xl font-semibold text-[#02385a] font-raleway">
+                  <h3 className="mt-6 text-2xl font-semibold text-[#02385a] font-Plus Jakarta Sans">
                     {service.title}
                   </h3>
 
@@ -313,7 +313,7 @@ export default function ElderlyCarePage() {
               Why Families Trust Us
             </p>
 
-            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold tracking-tight text-[#02385a] font-raleway">
+            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold tracking-tight text-[#02385a] font-Plus Jakarta Sans">
               Trusted Elderly Care Designed Around Comfort & Dignity
             </h2>
 
@@ -359,7 +359,7 @@ export default function ElderlyCarePage() {
 
           <div className="rounded-[40px] border border-slate-200 bg-white p-10 lg:p-16 shadow-sm">
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#02385a] font-raleway">
+            <h2 className="text-4xl font-semibold tracking-tight text-[#02385a] font-Plus Jakarta Sans">
               Elderly Care Services In Lagos & Nigeria
             </h2>
 

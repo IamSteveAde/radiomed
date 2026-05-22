@@ -91,7 +91,7 @@ export default function InvestorPartnershipSection() {
             </h2>
 
             <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
-              RadioMed is creating a scalable healthcare platform
+              Radio Medicine Technology Limited is creating a scalable healthcare platform
               designed around advanced diagnostics, sustainable
               infrastructure, and institutional healthcare
               partnerships.
@@ -201,7 +201,7 @@ export default function InvestorPartnershipSection() {
                   </h4>
 
                   <p className="mt-5 leading-relaxed text-white/70">
-                    RadioMed is positioned to capture growing
+                    Radio Medicine Technology Limited is positioned to capture growing
                     healthcare demand through a scalable,
                     technology-driven, and institutionally integrated
                     healthcare model.
@@ -226,7 +226,7 @@ export default function InvestorPartnershipSection() {
               onClick={() => setOpenModal("invest")}
               className="inline-flex items-center gap-3 rounded-full border border-[#071A3D]/10 bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#071A3D] transition-all duration-300 hover:bg-[#071A3D] hover:text-white"
             >
-              Invest In RadioMed
+              Invest In Radio Medicine Technology Limited
 
               <ArrowUpRight className="h-4 w-4" />
             </button>
@@ -249,7 +249,7 @@ export default function InvestorPartnershipSection() {
             {/* HEADER */}
             <div className="border-b border-slate-100 px-8 py-8">
               <p className="text-xs uppercase tracking-[0.3em] text-[#E50914]">
-                RadioMed
+                Radio Medicine Technology Limited
               </p>
 
               <h3 className="mt-3 text-3xl font-black text-[#071A3D]">

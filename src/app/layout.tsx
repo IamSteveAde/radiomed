@@ -43,32 +43,32 @@ export const metadata: Metadata = {
     "specialist healthcare Nigeria",
     "preventive healthcare Nigeria",
     "diagnostic services Lagos",
-    "RadioMed Technology",
+    "Radio Medicine Technology Limited",
   ],
 
-  authors: [{ name: "RadioMed Technology" }],
+  authors: [{ name: "Radio Medicine Technology Limited" }],
 
-  creator: "RadioMed Technology",
+  creator: "Radio Medicine Technology Limited",
 
-  publisher: "RadioMed Technology",
+  publisher: "Radio Medicine Technology Limited",
 
   openGraph: {
     title:
-      "RadioMed Technology | Advanced Diagnostic Healthcare in Nigeria",
+      "Radio Medicine Technology Limited| Advanced Diagnostic Healthcare in Nigeria",
 
     description:
       "Advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure built for underserved communities across Nigeria.",
 
     url: "https://www.radiomedtech.com",
 
-    siteName: "RadioMed Technology",
+    siteName: "Radio Medicine Technology Limited",
 
     images: [
       {
         url: "https://www.radiomedtech.com/images/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "RadioMed Technology Diagnostic Healthcare",
+        alt: "Radio Medicine Technology Limited Diagnostic Healthcare",
       },
     ],
 
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "RadioMed Technology | Diagnostic Healthcare Infrastructure",
+      "Radio Medicine Technology Limited | Diagnostic Healthcare Infrastructure",
 
     description:
       "Book advanced diagnostic services including MRI, CT scans, ultrasound, digital X-ray, laboratory diagnostics, and specialist healthcare support.",

@@ -120,7 +120,7 @@ export default function SustainabilitySection() {
               viewport={{ once: true }}
               className="mt-10 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl"
             >
-              RadioMed integrates clean energy systems, reliable
+              Radio Medicine Technology Limited integrates clean energy systems, reliable
               infrastructure, and advanced healthcare technology to
               create a more resilient and sustainable future for
               diagnostic healthcare delivery across Nigeria.

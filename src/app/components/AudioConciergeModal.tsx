@@ -120,7 +120,7 @@ export default function AudioConciergeModal() {
 
                     <div>
                       <p className="text-xs uppercase tracking-[0.3em] text-[#E50914]">
-                        RadioMed
+                        Radio Medicine Technology Limited
                       </p>
 
                       <h3 className="mt-2 text-2xl font-black">

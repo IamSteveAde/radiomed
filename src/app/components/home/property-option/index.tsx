@@ -252,7 +252,7 @@ export default function ServicesSection() {
               viewport={{ once: true }}
             >
               <p className="max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                RadioMed combines advanced medical imaging,
+                Radio Medicine Technology Limited combines advanced medical imaging,
                 laboratory diagnostics, and globally connected
                 healthcare systems to deliver faster diagnosis,
                 improved outcomes, and reliable patient care.

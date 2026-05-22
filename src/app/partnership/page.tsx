@@ -26,12 +26,12 @@ const partners = [
   {
     icon: ShieldCheck,
     title: "HMOs",
-    text: "Partner with RadioMed to expand diagnostic access, improve patient outcomes, and strengthen healthcare delivery networks.",
+    text: "Partner with Radio Medicine Technology Limited to expand diagnostic access, improve patient outcomes, and strengthen healthcare delivery networks.",
   },
   {
     icon: Hospital,
     title: "Hospitals & Clinics",
-    text: "Collaborate with RadioMed to provide advanced imaging and diagnostic support through connected healthcare infrastructure.",
+    text: "Collaborate with Radio Medicine Technology Limited to provide advanced imaging and diagnostic support through connected healthcare infrastructure.",
   },
   {
     icon: BriefcaseBusiness,
@@ -118,7 +118,7 @@ export default function InvestorsPartnershipPage() {
               {/* RIGHT */}
               <div>
                 <p className="text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
-                  RadioMed is creating a scalable healthcare
+                  Radio Medicine Technology Limited is creating a scalable healthcare
                   infrastructure platform designed around advanced
                   diagnostics, operational reliability, and
                   long-term healthcare accessibility.
@@ -126,7 +126,7 @@ export default function InvestorsPartnershipPage() {
                   <br />
                   Through institutional partnerships, technology-
                   driven healthcare delivery, and sustainable
-                  infrastructure, RadioMed is positioned to scale
+                  infrastructure, Radio Medicine Technology Limited is positioned to scale
                   diagnostic healthcare access across underserved
                   communities in Nigeria.
                 </p>
@@ -224,7 +224,7 @@ export default function InvestorsPartnershipPage() {
                 accessibility.
                 <br />
                 <br />
-                RadioMed’s scalable healthcare model is designed
+                Radio Medicine Technology Limited's scalable healthcare model is designed
                 to address this growing healthcare gap through
                 operational efficiency, institutional partnerships,
                 and technology-driven healthcare infrastructure.
@@ -246,7 +246,7 @@ export default function InvestorsPartnershipPage() {
               </h2>
 
               <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-slate-600">
-                RadioMed’s expansion strategy is built around
+                Radio Medicine Technology Limited's expansion strategy is built around
                 institutional collaboration, scalable healthcare
                 infrastructure, and long-term operational growth.
               </p>
@@ -326,7 +326,7 @@ export default function InvestorsPartnershipPage() {
               </h2>
 
               <p className="mt-8 text-lg leading-relaxed text-white/70">
-                RadioMed combines advanced diagnostics,
+                Radio Medicine Technology Limited combines advanced diagnostics,
                 infrastructure reliability, healthcare technology,
                 and partnership-driven growth into a scalable
                 operational healthcare platform.
@@ -408,7 +408,7 @@ export default function InvestorsPartnershipPage() {
             {/* HEADER */}
             <div className="border-b border-slate-100 px-8 py-8">
               <p className="text-xs uppercase tracking-[0.3em] text-[#E50914]">
-                RadioMed
+                Radio Medicine Technology Limited
               </p>
 
               <h3 className="mt-3 text-3xl font-black text-[#071A3D]">

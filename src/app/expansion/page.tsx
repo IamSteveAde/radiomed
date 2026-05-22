@@ -177,7 +177,7 @@ export default function ExpansionVisionPage() {
               viewport={{ once: true }}
             >
               <p className="text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
-                RadioMed’s long-term vision is centered around
+                Radio Medicine Technology Limited's long-term vision is centered around
                 building a scalable network of diagnostic
                 healthcare infrastructure across Nigeria —
                 beginning with Ogun State and expanding into major
@@ -186,7 +186,7 @@ export default function ExpansionVisionPage() {
                 <br />
                 Through advanced diagnostics, sustainable
                 infrastructure, and operational scalability,
-                RadioMed is creating a connected healthcare network
+                Radio Medicine Technology Limited is creating a connected healthcare network
                 designed for long-term national impact.
               </p>
 
@@ -466,7 +466,7 @@ export default function ExpansionVisionPage() {
             </h2>
 
             <p className="mt-8 text-lg leading-relaxed text-white/70">
-              RadioMed’s infrastructure model is designed around
+              Radio Medicine Technology Limited's infrastructure model is designed around
               operational scalability, sustainable healthcare
               systems, and connected diagnostic networks capable
               of supporting long-term healthcare expansion across

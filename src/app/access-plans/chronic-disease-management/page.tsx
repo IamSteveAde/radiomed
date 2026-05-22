@@ -140,7 +140,7 @@ export default function ChronicDiseaseManagementPage() {
               Trusted Chronic Disease Management
             </div>
 
-            <h1 className="mt-8 text-white text-5xl lg:text-7xl font-semibold leading-tight tracking-tight font-raleway">
+            <h1 className="mt-8 text-white text-5xl lg:text-7xl font-semibold leading-tight tracking-tight font-Plus Jakarta Sans">
 
               Long-Term
               <span className="block text-[#aa7130]">
@@ -230,7 +230,7 @@ export default function ChronicDiseaseManagementPage() {
               Healthcare Support Services
             </p>
 
-            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold tracking-tight font-raleway text-[#02385a]">
+            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold tracking-tight font-Plus Jakarta Sans text-[#02385a]">
 
               Personalized Chronic Care Management
 
@@ -270,7 +270,7 @@ export default function ChronicDiseaseManagementPage() {
 
 </div>
 
-                  <h3 className="mt-6 text-2xl font-semibold text-[#02385a] font-raleway">
+                  <h3 className="mt-6 text-2xl font-semibold text-[#02385a] font-Plus Jakarta Sans">
                     {service.title}
                   </h3>
 
@@ -311,7 +311,7 @@ export default function ChronicDiseaseManagementPage() {
               Why TriageHome
             </p>
 
-            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold tracking-tight text-[#02385a] font-raleway">
+            <h2 className="mt-4 text-4xl lg:text-5xl font-semibold tracking-tight text-[#02385a] font-Plus Jakarta Sans">
 
               Consistent Healthcare Support Built Around Everyday Life
 
@@ -360,7 +360,7 @@ export default function ChronicDiseaseManagementPage() {
 
           <div className="rounded-[40px] border border-slate-200 bg-white p-10 lg:p-16 shadow-sm">
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#02385a] font-raleway">
+            <h2 className="text-4xl font-semibold tracking-tight text-[#02385a] font-Plus Jakarta Sans">
 
               Chronic Disease Management In Lagos & Nigeria
 
@@ -414,7 +414,7 @@ export default function ChronicDiseaseManagementPage() {
                   Trusted Home Healthcare
                 </p>
 
-                <h2 className="mt-4 text-white text-4xl lg:text-5xl font-semibold tracking-tight leading-tight font-raleway">
+                <h2 className="mt-4 text-white text-4xl lg:text-5xl font-semibold tracking-tight leading-tight font-Plus Jakarta Sans">
 
                   Better Long-Term Healthcare Starts At Home
 

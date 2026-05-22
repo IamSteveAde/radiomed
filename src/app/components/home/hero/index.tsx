@@ -68,7 +68,7 @@ export default function HeroSection() {
               <div className="h-[1px] w-12 bg-[#E50914]" />
 
               <span className="text-sm font-medium uppercase tracking-[0.3em] text-[#E50914]">
-                RadioMed Technology
+                Radio Medicine Technology Limited
               </span>
             </motion.div>
 
@@ -274,7 +274,7 @@ export default function HeroSection() {
               {/* HEADER */}
               <div className="border-b border-slate-100 px-8 py-8">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#E50914]">
-                  RadioMed
+                  Radio Medicine Technology Limited
                 </p>
 
                 <h3 className="mt-3 text-3xl font-black text-[#071A3D]">

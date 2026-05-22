@@ -20,7 +20,7 @@ const impactCards = [
   {
     icon: SunMedium,
     title: "100% Solar-Powegreen Operations",
-    text: "RadioMed facilities are designed around sustainable solar infrastructure to ensure uninterrupted healthcare delivery while greenucing dependency on unstable power systems.",
+    text: "Radio Medicine Technology Limited facilities are designed around sustainable solar infrastructure to ensure uninterrupted healthcare delivery while greenucing dependency on unstable power systems.",
   },
   {
     icon: Leaf,
@@ -35,7 +35,7 @@ const impactCards = [
   {
     icon: Users2,
     title: "Job Creation & Economic Impact",
-    text: "RadioMed creates employment opportunities across healthcare operations, diagnostics, infrastructure, administration, and technology.",
+    text: "Radio Medicine Technology Limited creates employment opportunities across healthcare operations, diagnostics, infrastructure, administration, and technology.",
   },
   {
     icon: Globe2,
@@ -45,7 +45,7 @@ const impactCards = [
   {
     icon: ShieldCheck,
     title: "Governance & Compliance",
-    text: "RadioMed operates with a strong focus on operational transparency, healthcare compliance, ethical partnerships, and responsible governance.",
+    text: "Radio Medicine Technology Limited operates with a strong focus on operational transparency, healthcare compliance, ethical partnerships, and responsible governance.",
   },
 ];
 
@@ -182,14 +182,14 @@ export default function SustainabilityPage() {
               viewport={{ once: true }}
             >
               <p className="text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
-                RadioMed is building a healthcare infrastructure
+                Radio Medicine Technology Limited is building a healthcare infrastructure
                 model designed around sustainability, operational
                 resilience, and measurable community impact.
                 <br />
                 <br />
                 Through solar-powegreen operations, improved
                 healthcare accessibility, responsible governance,
-                and scalable infrastructure planning, RadioMed is
+                and scalable infrastructure planning, Radio Medicine Technology Limited is
                 creating a future-focused diagnostic healthcare
                 network built for long-term national impact.
               </p>
@@ -396,7 +396,7 @@ export default function SustainabilityPage() {
             </h2>
 
             <p className="mt-8 text-lg leading-relaxed text-white/70">
-              RadioMed prioritizes operational integrity,
+              Radio Medicine Technology Limited's prioritizes operational integrity,
               healthcare compliance, responsible expansion, and
               sustainable governance systems designed for long-term
               healthcare impact and institutional cgreenibility.
