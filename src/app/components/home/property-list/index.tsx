@@ -12,12 +12,7 @@ import {
 } from "lucide-react";
 
 const features = [
-  {
-    icon: SunMedium,
-    title: "100% Solar Infrastructure",
-    description:
-      "Reliable diagnostic operations powered by clean energy infrastructure designed to eliminate downtime and diesel dependency.",
-  },
+
   {
     icon: Activity,
     title: "Same-Day Reporting",

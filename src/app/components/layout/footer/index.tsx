@@ -25,8 +25,8 @@ const quickLinks = [
     href: "/services",
   },
   {
-    title: "Investors",
-    href: "/investors",
+    title: "Partnership",
+    href: "/partnership",
   },
 ];
 
@@ -260,7 +260,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-8 border-t border-white/10 py-10 lg:flex-row">
           {/* COPYRIGHT */}
           <p className="text-sm text-white/40">
-            © {new Date().getFullYear()} RadioMed Technology
+            © {new Date().getFullYear()} Radio Medicine Technology
             Limited. All rights reserved.
           </p>
 

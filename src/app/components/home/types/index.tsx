@@ -47,10 +47,7 @@ const metrics = [
     number: "7M+",
     label: "Target Population Reach",
   },
-  {
-    number: "4",
-    label: "Integrated Revenue Streams",
-  },
+
   {
     number: "100%",
     label: "Solar-Powered Infrastructure",

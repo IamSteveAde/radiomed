@@ -204,24 +204,7 @@ export default function HeroSection() {
               </motion.div>
 
               {/* FLOATING TOP CARD */}
-              <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                }}
-                className="absolute left-[-40px] top-10 rounded-3xl bg-white/80 px-6 py-5 backdrop-blur-xl shadow-[0_20px_60px_rgba(15,23,42,0.08)]"
-              >
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
-                  Infrastructure
-                </p>
-
-                <h3 className="mt-2 text-lg font-bold text-[#071A3D]">
-                  Powered By Solar
-                </h3>
-              </motion.div>
+              
 
               {/* FLOATING BOTTOM CARD */}
               <motion.div

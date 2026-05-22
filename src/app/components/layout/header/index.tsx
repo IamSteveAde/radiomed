@@ -45,8 +45,8 @@ export default function Header() {
       href: "/expansion",
     },
     {
-      name: "Investors",
-      href: "/investors",
+      name: "Partnership",
+      href: "/partnership",
     },
     {
       name: "Contact",

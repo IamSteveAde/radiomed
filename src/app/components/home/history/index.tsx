@@ -11,12 +11,7 @@ import {
 } from "lucide-react";
 
 const sustainabilityItems = [
-  {
-    icon: Sun,
-    title: "100% Solar Powered",
-    description:
-      "RadioMed facilities are designed around clean solar energy infrastructure for uninterrupted healthcare delivery.",
-  },
+  
   {
     icon: Zap,
     title: "Reliable Operations",
@@ -149,7 +144,7 @@ export default function SustainabilitySection() {
               className="mt-14 flex flex-wrap gap-4"
             >
               {[
-                "100% Solar Powered",
+               
                 "Zero Diesel Dependency",
                 "Reliable Operations",
               ].map((item, index) => (
