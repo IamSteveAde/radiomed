@@ -265,151 +265,154 @@ export default function InvestorPartnershipSection() {
             </div>
 
             {/* FORM */}
-            <form
-              action="https://formsubmit.co/adediranstephen2000@gmail.com"
-              method="POST"
-              className="space-y-6 px-8 py-8"
+            <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/70 px-4 py-6">
+  <div className="relative w-full max-w-3xl overflow-hidden rounded-[28px] bg-white shadow-2xl">
+    
+    {/* FORM */}
+    <form
+      action="https://formsubmit.co/adediranstephen2000@gmail.com"
+      method="POST"
+      className="max-h-[90vh] overflow-y-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8"
+    >
+      {/* FORMSUBMIT CONFIG */}
+      <input
+        type="hidden"
+        name="_subject"
+        value={`RadioMed ${
+          openModal === "invest"
+            ? "Investment Inquiry"
+            : "Partnership Inquiry"
+        }`}
+      />
+
+      <input type="hidden" name="_captcha" value="false" />
+
+      <input type="hidden" name="_template" value="table" />
+
+      <input
+        type="hidden"
+        name="Inquiry Type"
+        value={openModal}
+      />
+
+      {/* GRID */}
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        
+        <div className="min-w-0">
+          <label className="mb-2 block text-sm font-medium text-[#071A3D]">
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            name="Full Name"
+            required
+            className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-4 py-4 text-sm outline-none transition-all focus:border-[#E50914]"
+          />
+        </div>
+
+        <div className="min-w-0">
+          <label className="mb-2 block text-sm font-medium text-[#071A3D]">
+            Organization
+          </label>
+
+          <input
+            type="text"
+            name="Organization"
+            required
+            className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-4 py-4 text-sm outline-none transition-all focus:border-[#E50914]"
+          />
+        </div>
+      </div>
+
+      {/* SECOND GRID */}
+      <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
+        
+        <div className="min-w-0">
+          <label className="mb-2 block text-sm font-medium text-[#071A3D]">
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            name="Email"
+            required
+            className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-4 py-4 text-sm outline-none transition-all focus:border-[#E50914]"
+          />
+        </div>
+
+        <div className="min-w-0">
+          <label className="mb-2 block text-sm font-medium text-[#071A3D]">
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            name="Phone"
+            required
+            className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-4 py-4 text-sm outline-none transition-all focus:border-[#E50914]"
+          />
+        </div>
+      </div>
+
+      {/* CONDITIONAL FIELD */}
+      <div className="mt-5">
+        {openModal === "invest" ? (
+          <div>
+            <label className="mb-2 block text-sm font-medium text-[#071A3D]">
+              Investment Interest
+            </label>
+
+            <select
+              name="Investment Interest"
+              className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-4 py-4 text-sm outline-none transition-all focus:border-[#E50914]"
             >
-              {/* FORMSUBMIT CONFIG */}
-              <input
-                type="hidden"
-                name="_subject"
-                value={`RadioMed ${
-                  openModal === "invest"
-                    ? "Investment Inquiry"
-                    : "Partnership Inquiry"
-                }`}
-              />
+              <option>Equity Investment</option>
+              <option>Strategic Investment</option>
+              <option>Infrastructure Funding</option>
+              <option>Healthcare Expansion</option>
+            </select>
+          </div>
+        ) : (
+          <div>
+            <label className="mb-2 block text-sm font-medium text-[#071A3D]">
+              Partnership Category
+            </label>
 
-              <input
-                type="hidden"
-                name="_captcha"
-                value="false"
-              />
+            <input
+              type="text"
+              name="Partnership Category"
+              defaultValue={openModal}
+              className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-4 py-4 text-sm outline-none transition-all focus:border-[#E50914]"
+            />
+          </div>
+        )}
+      </div>
 
-              <input
-                type="hidden"
-                name="_template"
-                value="table"
-              />
+      {/* MESSAGE */}
+      <div className="mt-5">
+        <label className="mb-2 block text-sm font-medium text-[#071A3D]">
+          Message
+        </label>
 
-              <input
-                type="hidden"
-                name="Inquiry Type"
-                value={openModal}
-              />
+        <textarea
+          name="Message"
+          rows={5}
+          required
+          className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-4 py-4 text-sm outline-none transition-all focus:border-[#E50914]"
+        />
+      </div>
 
-              {/* GRID */}
-              <div className="grid gap-6 md:grid-cols-2">
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-[#071A3D]">
-                    Full Name
-                  </label>
-
-                  <input
-                    type="text"
-                    name="Full Name"
-                    required
-                    className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all focus:border-[#E50914]"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-[#071A3D]">
-                    Organization
-                  </label>
-
-                  <input
-                    type="text"
-                    name="Organization"
-                    required
-                    className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all focus:border-[#E50914]"
-                  />
-                </div>
-              </div>
-
-              <div className="grid gap-6 md:grid-cols-2">
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-[#071A3D]">
-                    Email Address
-                  </label>
-
-                  <input
-                    type="email"
-                    name="Email"
-                    required
-                    className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all focus:border-[#E50914]"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-[#071A3D]">
-                    Phone Number
-                  </label>
-
-                  <input
-                    type="tel"
-                    name="Phone"
-                    required
-                    className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all focus:border-[#E50914]"
-                  />
-                </div>
-              </div>
-
-              {/* INVESTOR EXTRA FIELD */}
-              {openModal === "invest" ? (
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-[#071A3D]">
-                    Investment Interest
-                  </label>
-
-                  <select
-                    name="Investment Interest"
-                    className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all focus:border-[#E50914]"
-                  >
-                    <option>Equity Investment</option>
-                    <option>Strategic Investment</option>
-                    <option>Infrastructure Funding</option>
-                    <option>Healthcare Expansion</option>
-                  </select>
-                </div>
-              ) : (
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-[#071A3D]">
-                    Partnership Category
-                  </label>
-
-                  <input
-                    type="text"
-                    name="Partnership Category"
-                    defaultValue={openModal}
-                    className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all focus:border-[#E50914]"
-                  />
-                </div>
-              )}
-
-              {/* MESSAGE */}
-              <div>
-                <label className="mb-2 block text-sm font-medium text-[#071A3D]">
-                  Message
-                </label>
-
-                <textarea
-                  name="Message"
-                  rows={5}
-                  required
-                  className="w-full rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all focus:border-[#E50914]"
-                />
-              </div>
-
-              {/* SUBMIT */}
-              <button
-                type="submit"
-                className="w-full rounded-2xl bg-[#071A3D] px-8 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-[#E50914]"
-              >
-                Submit Request
-              </button>
-            </form>
+      {/* SUBMIT */}
+      <button
+        type="submit"
+        className="mt-6 w-full rounded-2xl bg-[#071A3D] px-6 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-[#E50914]"
+      >
+        Submit Request
+      </button>
+    </form>
+  </div>
+</div>
           </div>
         </div>
       )}
