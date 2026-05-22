@@ -43,7 +43,7 @@ const expertise = [
   {
     icon: Building2,
     title: "Operational Infrastructure",
-    text: "RadioMed combines healthcare operations, infrastructure planning, and technology-driven diagnostic delivery.",
+    text: "Radio Medicine Technology Limited combines healthcare operations, infrastructure planning, and technology-driven diagnostic delivery.",
   },
   {
     icon: Users2,
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 <div className="h-[1px] w-14 bg-[#E50914]" />
 
                 <span className="text-xs uppercase tracking-[0.35em] text-[#E50914] sm:text-sm">
-                  About RadioMed
+                  About Radio Medicine Technology Limited
                 </span>
               </motion.div>
 
@@ -176,7 +176,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <p className="text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
-                RadioMed is a healthcare infrastructure and
+                Radio Medicine Technology Limited is a healthcare infrastructure and
                 diagnostic technology company focused on improving
                 access to advanced imaging, laboratory
                 diagnostics, and modern healthcare delivery across
@@ -185,7 +185,7 @@ export default function AboutPage() {
                 <br />
                 Through advanced diagnostics, sustainable
                 infrastructure, operational expertise, and global
-                healthcare connectivity, RadioMed is building a
+                healthcare connectivity, Radio Medicine Technology Limited is building a
                 scalable healthcare network designed to deliver
                 faster diagnosis, improved outcomes, and reliable
                 access to quality healthcare.
@@ -224,7 +224,7 @@ export default function AboutPage() {
             {/* IMAGE */}
             <img
               src="/images/hero/mri.webp"
-              alt="RadioMed Healthcare"
+              alt="Radio Medicine Technology Limited Healthcare"
               className="h-[500px] w-full object-cover md:h-[700px]"
             />
 
@@ -247,7 +247,7 @@ export default function AboutPage() {
               </p>
 
               <h3 className="mt-4 text-2xl font-black leading-tight text-white sm:text-3xl">
-                RadioMed is building a scalable diagnostic
+                Radio Medicine Technology Limited is building a scalable diagnostic
                 healthcare network across Nigeria.
               </h3>
 
@@ -284,7 +284,7 @@ export default function AboutPage() {
               unreliable healthcare infrastructure.
               <br />
               <br />
-              RadioMed exists to bridge this healthcare gap by
+              Radio Medicine Technology Limited exists to bridge this healthcare gap by
               building modern diagnostic centers supported by
               advanced imaging technology, laboratory systems,
               sustainable infrastructure, and globally connected
@@ -437,7 +437,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-8 text-lg leading-relaxed text-white/70">
-              RadioMed’s operational foundation is built on
+              Radio Medicine Technology Limited's operational foundation is built on
               existing healthcare and diagnostic operational
               experience within Lagos, providing real-world
               understanding of healthcare infrastructure,

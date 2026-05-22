@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const messages = [
   "Need a CT Scan or MRI appointment?",
-  "Speak with a RadioMed care concierge instantly.",
+  "Speak with a Radio Medicine Technology Limited care concierge instantly.",
   "Book advanced diagnostic services in minutes.",
   "Get connected to trusted healthcare support today.",
 ];
@@ -67,7 +67,7 @@ export default function WhatsAppConcierge() {
 
               <div>
                 <p className="text-xs uppercase tracking-[0.25em] text-[#E50914]">
-                  RadioMed
+                  Radio Medicine Technology Limited
                 </p>
 
                 <h4 className="mt-1 text-sm font-bold text-[#071A3D]">

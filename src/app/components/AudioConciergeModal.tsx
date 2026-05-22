@@ -150,7 +150,7 @@ export default function AudioConciergeModal() {
 
                   <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
                     Would you like a quick guided introduction to
-                    RadioMed’s advanced imaging, diagnostics, and
+                    Radio Medicine Technology Limited's advanced imaging, diagnostics, and
                     healthcare infrastructure platform?
                   </p>
                 </div>

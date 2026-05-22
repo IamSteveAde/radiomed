@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "RadioMed Technology | Advanced Diagnostic Healthcare in Nigeria",
-    template: "%s | RadioMed Technology",
+      "Radio Medicine Technology Limited | Advanced Diagnostic Healthcare in Nigeria",
+    template: "%s | Radio Medicine Technology Limited",
   },
 
   description:
-    "RadioMed Technology is transforming diagnostic healthcare in Nigeria through advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure. Access CT scans, MRI imaging, ultrasound, digital X-ray, laboratory diagnostics, and specialist healthcare support.",
+    "Radio Medicine Technology Limited is transforming diagnostic healthcare in Nigeria through advanced imaging, laboratory diagnostics, telemedicine, and technology-driven healthcare infrastructure. Access CT scans, MRI imaging, ultrasound, digital X-ray, laboratory diagnostics, and specialist healthcare support.",
 
   keywords: [
     "diagnostic healthcare Nigeria",
