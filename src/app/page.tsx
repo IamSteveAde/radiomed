@@ -93,7 +93,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://www.radiomedtech.com/images/banner.jpg",
+        url: "https://www.radiomedtech.com/images/banners.jpeg",
         width: 1200,
         height: 630,
         alt: "Radio Medicine Technology Limited Diagnostic Healthcare Infrastructure",
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
       "Book advanced diagnostic services including MRI, CT scans, ultrasound, digital X-ray, laboratory diagnostics, and specialist healthcare support.",
 
     images: [
-      "https://www.radiomedtech.com/images/banner.jpg",
+      "https://www.radiomedtech.com/images/banners.jpeg",
     ],
 
     creator: "@radiomedtech",
