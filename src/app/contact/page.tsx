@@ -314,7 +314,7 @@ export default function ContactPage() {
 
                 {/* FORM */}
                 <form
-  action="https://formsubmit.co/adediranstephen2000@gmail.com"
+  action="https://formsubmit.co/info@theplatformcapital.com"
   method="POST"
   className="mt-10 space-y-6"
 >

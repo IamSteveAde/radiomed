@@ -180,7 +180,7 @@ export default function FinalCTASection() {
 
             {/* FORM */}
             <form
-              action="https://formsubmit.co/adediranstephen2000@gmail.com"
+              action="https://formsubmit.co/info@theplatformcapital.com"
               method="POST"
               className="space-y-6 px-8 py-8"
             >

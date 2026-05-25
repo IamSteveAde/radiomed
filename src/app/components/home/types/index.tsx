@@ -302,7 +302,7 @@ export default function InvestorPartnershipSection() {
       <div className="max-h-[calc(100vh-120px)] overflow-y-auto">
         
         <form
-          action="https://formsubmit.co/adediranstephen2000@gmail.com"
+          action="https://formsubmit.co/info@theplatformcapital.com"
           method="POST"
           className="space-y-6 px-4 py-5 sm:px-8 sm:py-8"
         >
